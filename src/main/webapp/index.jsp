@@ -32,8 +32,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Material Design for Bootstrap -->
+        <link href="css/material-wfont.min.css" rel="stylesheet">
+        <link href="css/ripples.min.css" rel="stylesheet">
+
         <% if (user != null) {%>
-        <link rel="stylesheet" href="css/skin/<%=user.getSkin()%>.css">
+        <link rel="stylesheet" href="css/skin/<%=user.getSkin()%>.css"> 
         <% } else {%>
         <link rel="stylesheet" href="css/skin/main.css">
         <% }%>
@@ -42,7 +46,7 @@
         <link rel="stylesheet" href="css/bootstrapValidator.min.css">
         <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css"  />
         <link rel="stylesheet" href="css/documentobonito.css">
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -131,6 +135,9 @@
         <script type="text/javascript"  src="./js/vendor/bootstrap.min.js"></script>
         <script type="text/javascript"  src="./js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
+        <script src="./js/vendor/ripples.min.js"></script>
+        <script src="./js/vendor/material.min.js"></script>
+
         <script type="text/javascript"  src="./js/vendor/moment.js"></script>
         <script type="text/javascript"  src="./js/vendor/moment.locale.es.js"></script>
         <script type="text/javascript"  src="./js/vendor/bootstrap-datetimepicker.min.js"></script>
@@ -139,6 +146,12 @@
         <script type="text/javascript"  src="./js/vendor/bootstrapValidator.min.js"></script>
         <script type="text/javascript"  src="./js/vendor/language/es_ES.js"></script>
         <script type="text/javascript"  src="./js/vendor/creole-parser.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $.material.init();
+            });
+        </script>
 
         <!--
         <script type="text/javascript"  src="./js/vendor/jquery-ui.js"></script>
@@ -202,12 +215,12 @@
         <script src="js/specific/usuario/model.js" charset="UTF-8"></script>
         <script src="js/specific/usuario/view.js" charset="UTF-8"></script>
         <script src="js/specific/usuario/routes.js" charset="UTF-8"></script>
-        
+
         <script src="js/specific/tipodocumento/control.js" charset="UTF-8"></script>
         <script src="js/specific/tipodocumento/model.js" charset="UTF-8"></script>
         <script src="js/specific/tipodocumento/view.js" charset="UTF-8"></script>
         <script src="js/specific/tipodocumento/routes.js" charset="UTF-8"></script>
-        
+
         <script src="js/specific/pregunta/control.js" charset="UTF-8"></script>
         <script src="js/specific/pregunta/model.js" charset="UTF-8"></script>
         <script src="js/specific/pregunta/view.js" charset="UTF-8"></script>
@@ -296,12 +309,12 @@
         <script src="js/specific/respuesta/model.js" charset="UTF-8"></script>
         <script src="js/specific/respuesta/view.js" charset="UTF-8"></script>
         <script src="js/specific/respuesta/routes.js" charset="UTF-8"></script>
-        
+
         <script src="js/specific/documentobonito/control.js" charset="UTF-8"></script>
         <script src="js/specific/documentobonito/model.js" charset="UTF-8"></script>
         <script src="js/specific/documentobonito/view.js" charset="UTF-8"></script>
         <script src="js/specific/documentobonito/routes.js" charset="UTF-8"></script>
-        
+
         <script src="js/specific/tarea/control.js" charset="UTF-8"></script>
         <script src="js/specific/tarea/model.js" charset="UTF-8"></script>
         <script src="js/specific/tarea/view.js" charset="UTF-8"></script>
