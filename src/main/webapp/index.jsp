@@ -177,167 +177,15 @@
             var path = '<%=request.getContextPath()%>';
         </script>
 
-        <script src="js/specific/documento/control.js" charset="UTF-8"></script>
-        <script src="js/specific/documento/model.js" charset="UTF-8"></script>
-        <script src="js/specific/documento/view.js" charset="UTF-8"></script>
-        <script src="js/specific/documento/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/opcion/control.js" charset="UTF-8"></script>
-        <script src="js/specific/opcion/model.js" charset="UTF-8"></script>
-        <script src="js/specific/opcion/view.js" charset="UTF-8"></script>
-        <script src="js/specific/opcion/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/publicacion/control.js" charset="UTF-8"></script>
-        <script src="js/specific/publicacion/model.js" charset="UTF-8"></script>
-        <script src="js/specific/publicacion/view.js" charset="UTF-8"></script>
-        <script src="js/specific/publicacion/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/amigo/control.js" charset="UTF-8"></script>
-        <script src="js/specific/amigo/model.js" charset="UTF-8"></script>
-        <script src="js/specific/amigo/view.js" charset="UTF-8"></script>
-        <script src="js/specific/amigo/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/estado/control.js" charset="UTF-8"></script>
-        <script src="js/specific/estado/model.js" charset="UTF-8"></script>
-        <script src="js/specific/estado/view.js" charset="UTF-8"></script>
-        <script src="js/specific/estado/routes.js" charset="UTF-8"></script>
-        <script src="js/specific/cuestionario/control.js" charset="UTF-8"></script>
-        <script src="js/specific/cuestionario/model.js" charset="UTF-8"></script>
-        <script src="js/specific/cuestionario/view.js" charset="UTF-8"></script>
-        <script src="js/specific/cuestionario/routes.js" charset="UTF-8"></script>
-        <script src="js/specific/actividad/control.js" charset="UTF-8"></script>
-        <script src="js/specific/actividad/model.js" charset="UTF-8"></script>
-        <script src="js/specific/actividad/view.js" charset="UTF-8"></script>
-        <script src="js/specific/actividad/routes.js" charset="UTF-8"></script>
-
-
         <script src="js/specific/usuario/control.js" charset="UTF-8"></script>
         <script src="js/specific/usuario/model.js" charset="UTF-8"></script>
         <script src="js/specific/usuario/view.js" charset="UTF-8"></script>
         <script src="js/specific/usuario/routes.js" charset="UTF-8"></script>
 
-        <script src="js/specific/tipodocumento/control.js" charset="UTF-8"></script>
-        <script src="js/specific/tipodocumento/model.js" charset="UTF-8"></script>
-        <script src="js/specific/tipodocumento/view.js" charset="UTF-8"></script>
-        <script src="js/specific/tipodocumento/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/pregunta/control.js" charset="UTF-8"></script>
-        <script src="js/specific/pregunta/model.js" charset="UTF-8"></script>
-        <script src="js/specific/pregunta/view.js" charset="UTF-8"></script>
-        <script src="js/specific/pregunta/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/publicacion/control.js" charset="UTF-8"></script>
-        <script src="js/specific/publicacion/model.js" charset="UTF-8"></script>
-        <script src="js/specific/publicacion/view.js" charset="UTF-8"></script>
-        <script src="js/specific/publicacion/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/entrega/control.js" charset="UTF-8"></script>
-        <script src="js/specific/entrega/model.js" charset="UTF-8"></script>
-        <script src="js/specific/entrega/view.js" charset="UTF-8"></script>
-        <script src="js/specific/entrega/routes.js" charset="UTF-8"></script>
-
-
         <script src="js/specific/tipousuario/control.js" charset="UTF-8"></script>
         <script src="js/specific/tipousuario/model.js" charset="UTF-8"></script>
         <script src="js/specific/tipousuario/view.js" charset="UTF-8"></script>
         <script src="js/specific/tipousuario/routes.js" charset="UTF-8"></script>
-        <!-- Fin Modificación Juanma Usuarios -->
-
-        <!-- FORO -->        
-        <script src="js/specific/tipotema/control.js" charset="UTF-8"></script>
-        <script src="js/specific/tipotema/model.js" charset="UTF-8"></script>
-        <script src="js/specific/tipotema/view.js" charset="UTF-8"></script>
-        <script src="js/specific/tipotema/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/tema/control.js" charset="UTF-8"></script>
-        <script src="js/specific/tema/model.js" charset="UTF-8"></script>
-        <script src="js/specific/tema/view.js" charset="UTF-8"></script>
-        <script src="js/specific/tema/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/post/control.js" charset="UTF-8"></script>
-        <script src="js/specific/post/model.js" charset="UTF-8"></script>
-        <script src="js/specific/post/view.js" charset="UTF-8"></script>
-        <script src="js/specific/post/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/mensajeprivado/control.js" charset="UTF-8"></script>
-        <script src="js/specific/mensajeprivado/model.js" charset="UTF-8"></script>
-        <script src="js/specific/mensajeprivado/view.js" charset="UTF-8"></script>
-        <script src="js/specific/mensajeprivado/routes.js" charset="UTF-8"></script>
-        <!-- FIN FORO -->
-
-        <!-- PROPUESTAS Y VOTACIONES -->   
-
-        <script src="js/specific/propuesta/control.js" charset="UTF-8"></script>
-        <script src="js/specific/propuesta/model.js" charset="UTF-8"></script>
-        <script src="js/specific/propuesta/view.js" charset="UTF-8"></script>
-        <script src="js/specific/propuesta/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/tipopropuesta/control.js" charset="UTF-8"></script>
-        <script src="js/specific/tipopropuesta/model.js" charset="UTF-8"></script>
-        <script src="js/specific/tipopropuesta/view.js" charset="UTF-8"></script>
-        <script src="js/specific/tipopropuesta/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/comentario/control.js" charset="UTF-8"></script>
-        <script src="js/specific/comentario/model.js" charset="UTF-8"></script>
-        <script src="js/specific/comentario/view.js" charset="UTF-8"></script>
-        <script src="js/specific/comentario/routes.js" charset="UTF-8"></script>
-
-        <!--FIN PROPUESTAS Y VOTACIONES-->
-
-        <script src="js/specific/proveedor/control.js" charset="UTF-8"></script>
-        <script src="js/specific/proveedor/model.js" charset="UTF-8"></script>
-        <script src="js/specific/proveedor/view.js" charset="UTF-8"></script>
-        <script src="js/specific/proveedor/routes.js" charset="UTF-8"></script>
-
-
-        <script src="js/specific/impuesto/control.js" charset="UTF-8"></script>
-        <script src="js/specific/impuesto/model.js" charset="UTF-8"></script>
-        <script src="js/specific/impuesto/view.js" charset="UTF-8"></script>
-        <script src="js/specific/impuesto/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/pedido/control.js" charset="UTF-8"></script>
-        <script src="js/specific/pedido/model.js" charset="UTF-8"></script>
-        <script src="js/specific/pedido/view.js" charset="UTF-8"></script>
-        <script src="js/specific/pedido/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/detalle_pedido/control.js" charset="UTF-8"></script>
-        <script src="js/specific/detalle_pedido/model.js" charset="UTF-8"></script>
-        <script src="js/specific/detalle_pedido/view.js" charset="UTF-8"></script>
-        <script src="js/specific/detalle_pedido/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/respuesta/control.js" charset="UTF-8"></script>
-        <script src="js/specific/respuesta/model.js" charset="UTF-8"></script>
-        <script src="js/specific/respuesta/view.js" charset="UTF-8"></script>
-        <script src="js/specific/respuesta/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/documentobonito/control.js" charset="UTF-8"></script>
-        <script src="js/specific/documentobonito/model.js" charset="UTF-8"></script>
-        <script src="js/specific/documentobonito/view.js" charset="UTF-8"></script>
-        <script src="js/specific/documentobonito/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/tarea/control.js" charset="UTF-8"></script>
-        <script src="js/specific/tarea/model.js" charset="UTF-8"></script>
-        <script src="js/specific/tarea/view.js" charset="UTF-8"></script>
-        <script src="js/specific/tarea/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/tipotarea/control.js" charset="UTF-8"></script>
-        <script src="js/specific/tipotarea/model.js" charset="UTF-8"></script>
-        <script src="js/specific/tipotarea/view.js" charset="UTF-8"></script>
-        <script src="js/specific/tipotarea/routes.js" charset="UTF-8"></script>
-
-        <script src="js/specific/proyecto/control.js" charset="UTF-8"></script>
-        <script src="js/specific/proyecto/model.js" charset="UTF-8"></script>
-        <script src="js/specific/proyecto/view.js" charset="UTF-8"></script>
-        <script src="js/specific/proyecto/routes.js" charset="UTF-8"></script>
-
-
-        <script src="js/specific/estadotarea/control.js" charset="UTF-8"></script>
-        <script src="js/specific/estadotarea/model.js" charset="UTF-8"></script>
-        <script src="js/specific/estadotarea/view.js" charset="UTF-8"></script>
-        <script src="js/specific/estadotarea/routes.js" charset="UTF-8"></script>
-
-
-        <script src="js/specific/tipodocumento/model.js" charset="UTF-8"></script>
 
         <script type="text/javascript">
 
@@ -351,37 +199,8 @@
 
                 inicializacion();
 
-
-                fDocumentoRoutes();
-                fTipotareaRoutes();
-                fTareaRoutes();
-                fEstadotareaRoutes();
-                fProyectoRoutes();
-                fOpcionRoutes();
-                fPreguntaRoutes();
-                fCuestionarioRoutes();
-                fAmigoRoutes();
                 fUsuarioRoutes();
-                fPublicacionRoutes();
-                fPostRoutes();
-                fMensajeprivadoRoutes();
-                fTemaRoutes();
-                fTipotemaRoutes();
-                fEstadoRoutes();
-                fProveedorRoutes();
-                fImpuestoRoutes();
-                fActividadRoutes();
-                fEntregaRoutes();
-                fPedidoRoutes();
-                fDetalle_pedidoRoutes();
-                fRespuestaRoutes();
-                fComentarioRoutes();
-                fPropuestaRoutes();
-                fTipopropuestaRoutes();
-                fDocumentobonitoRoutes();
-                fTipodocumentoRoutes();
-
-
+                fTipousuarioRoutes();
 
                 Path.listen();
 
