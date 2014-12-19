@@ -32,9 +32,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- Material Design for Bootstrap -->
-        <link href="css/material-wfont.min.css" rel="stylesheet">
-        <link href="css/ripples.min.css" rel="stylesheet">
+        <link href="css/bootstrap.icon-large.min.css" rel="stylesheet">
 
         <% if (user != null) {%>
         <link rel="stylesheet" href="css/skin/<%=user.getSkin()%>.css"> 
@@ -45,7 +43,6 @@
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/bootstrapValidator.min.css">
         <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css"  />
-        <link rel="stylesheet" href="css/documentobonito.css">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
