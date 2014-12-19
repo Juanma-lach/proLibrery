@@ -18,16 +18,23 @@
 
 <%@page import="net.daw.helper.AppInformationHelper"%>
 <%@page import="net.daw.helper.EstadoHelper"%>
-<div class="jumbotron">
+<!--<div class="jumbotron">
     <h1>Bienvenidos a <%=AppInformationHelper.getAppName()%> <%=EstadoHelper.getAnyo()%></h1>
     <h3>Versión (v.<%=EstadoHelper.getVersion()%>) de <%=EstadoHelper.getFecha()%></h3>
     <h5>Desarrollo de aplicaciones web. CPIFP Ausiàs March. Curso <%=EstadoHelper.getCurso()%></h5>   
-    <%
-        if (EstadoHelper.getTipo_estado() == EstadoHelper.getTipo_estado().Debug) {
-            out.print("<h5>Modo debug</h5>");
-        }
-    %>
+<%
+    if (EstadoHelper.getTipo_estado() == EstadoHelper.getTipo_estado().Debug) {
+        out.print("<h5>Modo debug</h5>");
+    }
+%>
+</div>-->
+<div id="intro">
+    <h1>
+        Voreal<br/>
+        <span>Luce como tu quieras</span>
+    </h1>
 </div>
+
 <div class="row">
     <div class="col-md-8">
         <div class="row">

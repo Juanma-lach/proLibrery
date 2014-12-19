@@ -39,6 +39,9 @@
         <% } else {%>
         <link rel="stylesheet" href="css/skin/main.css">
         <% }%>
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
         <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/bootstrapValidator.min.css">
@@ -56,15 +59,16 @@
         <![endif]-->
 
         <!-- Fixed navbar -->
-        <div class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
+                    <a class="navbar-brand btn btn-inverse view" href="jsp"><i class="glyphicon glyphicon-home"></i></a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="jsp"><%=AppInformationHelper.getAppName()%></a>
+                    <a id="app" class="navbar-brand" href="jsp"><%=AppInformationHelper.getAppName()%></a>
                 </div>
                 <div class="collapse navbar-collapse">
 
@@ -84,44 +88,43 @@
 
         <% if (user != null) {%>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2" id="menuLateral">
-                    <jsp:include page="jsp/menuLateral.jsp" />
-                </div>
-                <div class="col-md-10">
-                    <div id="indexContenido"></div>
-                    <div id="indexContenidoJsp">
-                        <jsp:include page='<%=(String) request.getAttribute("contenido")%>' />                
-                    </div>
 
+        <div class="row">
+            <!--<div class="col-md-2" id="menuLateral">
+            <jsp:include page="jsp/menuLateral.jsp" />
+        </div>-->
+            <div class="col-md-12">
+                <div id="indexContenido"></div>
+                <div id="indexContenidoJsp">
+                    <jsp:include page='<%=(String) request.getAttribute("contenido")%>' />                
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12" id="contenidoParseado"></div>   
-            </div>
-            <div class="row">
-                <div class="col-md-12"><hr><footer><p class="pull-right">&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></footer></div> 
-            </div>
-        </div>            
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="contenidoParseado"></div>   
+        </div>
+        <div class="row">
+            <div class="col-md-12"><hr><footer><p class="pull-right">&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></footer></div> 
+        </div>
+
 
         <% } else {%>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="indexContenidoJsp">
-                        <jsp:include page='<%=(String) request.getAttribute("contenido")%>' />                
-                    </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="indexContenidoJsp">
+                    <jsp:include page='<%=(String) request.getAttribute("contenido")%>' />                
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12" id="contenidoParseado"></div>   
-            </div>
-            <div class="row">
-                <div class="col-md-12"><hr><footer><p class="pull-right">&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></footer></div>   
-            </div>
-        </div>  
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="contenidoParseado"></div>   
+        </div>
+        <div class="row">
+            <div class="col-md-12"><hr><footer><p class="pull-right">&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></footer></div>   
+        </div>
+
 
 
         <% }%>
@@ -132,9 +135,6 @@
         <script type="text/javascript"  src="./js/vendor/bootstrap.min.js"></script>
         <script type="text/javascript"  src="./js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
-        <script src="./js/vendor/ripples.min.js"></script>
-        <script src="./js/vendor/material.min.js"></script>
-
         <script type="text/javascript"  src="./js/vendor/moment.js"></script>
         <script type="text/javascript"  src="./js/vendor/moment.locale.es.js"></script>
         <script type="text/javascript"  src="./js/vendor/bootstrap-datetimepicker.min.js"></script>
@@ -144,11 +144,6 @@
         <script type="text/javascript"  src="./js/vendor/language/es_ES.js"></script>
         <script type="text/javascript"  src="./js/vendor/creole-parser.js"></script>
 
-        <script>
-            $(document).ready(function () {
-                $.material.init();
-            });
-        </script>
 
         <!--
         <script type="text/javascript"  src="./js/vendor/jquery-ui.js"></script>

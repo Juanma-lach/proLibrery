@@ -18,10 +18,10 @@
 
 
 
-<li><a href="jsp">Inicio</a></li>
 <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Objetos <b class="caret"></b></a>
     <ul class="dropdown-menu">
+        <li class="dropdown-header">Gestión de usuarios</li>
         <li><a href="jsp#/usuario">Usuario</a></li>
         <li class="divider"></li>
         <li class="dropdown-header">División</li>     
