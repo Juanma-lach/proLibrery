@@ -11,16 +11,21 @@ and open the template in the editor.
 
 
 body {
-    // padding-top: 80px;
     background-color: lightgrey;
 }
 
+.margen-superior {
+    margin-top: 80px;
+}
+
+/* Navbar */
 #app {
     position: absolute;
     top: 2%;
     left: 47%;
 }
 
+/* Intro de la pagina de inicio */
 #intro {
     position: relative;
     background: url(../../images/fotoIntro.jpg) no-repeat center center;
@@ -49,11 +54,13 @@ body {
     color: lightgrey;
 }
 
-.jumbotron {
-
+/*.jumbotron {
     background-color: #f0a30a ;
-}
+}*/
 
+/* Zona de informacion */
+
+/* Cabecera de las tablas */
 .panel-default>.panel-heading {
     background-color:#60a917;
     color:whitesmoke;

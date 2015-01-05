@@ -17,7 +17,7 @@
 --%>
 
 <%@page import="net.daw.helper.EstadoHelper"%>
-<div class="container">
+<div class="container margen-superior">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
             <img class="pull-left" src="fonts/user.png" alt="user image" style="padding: 20px 10px 5px 0" />

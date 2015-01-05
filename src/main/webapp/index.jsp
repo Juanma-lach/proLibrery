@@ -93,7 +93,7 @@
             <!--<div class="col-md-2" id="menuLateral">
             <jsp:include page="jsp/menuLateral.jsp" />
         </div>-->
-            <div class="col-md-12">
+            <div class="col-md-10 col-md-offset-1">
                 <div id="indexContenido"></div>
                 <div id="indexContenidoJsp">
                     <jsp:include page='<%=(String) request.getAttribute("contenido")%>' />                

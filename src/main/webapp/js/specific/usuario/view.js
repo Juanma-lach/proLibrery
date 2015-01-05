@@ -39,30 +39,11 @@ usuarioView.prototype.loadButtons = function (id) {
 
 }
 usuarioView.prototype.loadFormValues = function (valores, campos) {
-//                    $('#usuario_form #titulo').val(valores['titulo']);
-//                    $('#usuario_form #contenido').val(valores['contenido']);
-//                    $('#usuario_form #alta').val(valores['alta']);
-//                    $('#usuario_form #cambio').val(valores['cambio']);
-//                    $('#usuario_form #hits').val(valores['hits']);
-//                    $('#usuario_form #id_usuario').val(valores['id_usuario']);
-//                    $('#usuario_form #etiquetas').val(valores['etiquetas']);
-//                    $('#usuario_form #publicado').val(valores['publicado']);
-//                    $('#usuario_form #portada').val(valores['portada']);
     this.doFillForm(valores, campos);
 };
 
 usuarioView.prototype.getFormValues = function () {
     var valores = [];
-//                    valores['titulo'] = $('#usuario_form #titulo');
-//                    valores['contenido'] = $('#usuario_form #contenido');
-//                    valores['alta'] = $('#usuario_form #alta');
-//                    valores['cambio'] = $('#usuario_form #cambio');
-//                    valores['hits'] = $('#usuario_form #hits');
-//                    valores['id_usuario'] = $('#usuario_form #id_usuario');
-//                    valores['etiquetas'] = $('#usuario_form #etiquetas');
-//                    valores['publicado'] = $('#usuario_form #publicado');
-//                    valores['portada'] = $('#usuario_form #portada');
-
     var disabled = $('#usuarioForm').find(':input:disabled').removeAttr('disabled');
     valores = $('#usuarioForm').serializeObject();
     disabled.attr('disabled', 'disabled');

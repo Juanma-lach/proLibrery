@@ -28,7 +28,7 @@
 %>
 <div class="row">
     <div class="col-md-12">
-        <div class="tabbable">
+        <div class="table">
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#pane1" data-toggle="tab">Paginación</a></li>                
                 <li><a href="#pane2" data-toggle="tab">Filtro</a></li>
