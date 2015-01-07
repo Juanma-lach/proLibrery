@@ -32,7 +32,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link href="css/bootstrap.icon-large.min.css" rel="stylesheet">
+        <!-- Metro Bootstrapt -->
+        <link rel="stylesheet" href="css/metro-bootstrap.min.css">
+        <link rel="stylesheet" href="css/metro-bootstrap-responsive.min.css">
+        <link href="css/iconFont.min.css" rel="stylesheet">
 
         <% if (user != null) {%>
         <link rel="stylesheet" href="css/skin/<%=user.getSkin()%>.css"> 
@@ -42,8 +45,10 @@
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+        
         <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
-        <link rel="stylesheet" href="css/animate.css">
+        
+        <!-- FAlTA --><link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/bootstrapValidator.min.css">
         <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css"  />
 
@@ -62,7 +67,7 @@
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand btn btn-inverse view" href="jsp"><i class="glyphicon glyphicon-home"></i></a>
+                    <a class="navbar-brand btn btn-inverse view" href="jsp?ob=usuario&op=menu"><i class="icon-home"></i></a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -93,7 +98,7 @@
             <!--<div class="col-md-2" id="menuLateral">
             <jsp:include page="jsp/menuLateral.jsp" />
         </div>-->
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-10 col-md-offset-1 metro">
                 <div id="indexContenido"></div>
                 <div id="indexContenidoJsp">
                     <jsp:include page='<%=(String) request.getAttribute("contenido")%>' />                
@@ -143,6 +148,8 @@
         <script type="text/javascript"  src="./js/vendor/bootstrapValidator.min.js"></script>
         <script type="text/javascript"  src="./js/vendor/language/es_ES.js"></script>
         <script type="text/javascript"  src="./js/vendor/creole-parser.js"></script>
+        
+        <script type="text/javascript"  src="./js/vendor/metro.min.js"></script>
 
 
         <!--

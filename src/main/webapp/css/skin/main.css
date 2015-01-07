@@ -11,11 +11,11 @@ and open the template in the editor.
 
 
 body {
-    background-color: lightgrey;
+    background-color: #white;
 }
 
 .margen-superior {
-    margin-top: 80px;
+    margin-top: 80px !important;
 }
 
 /* Navbar */
@@ -45,6 +45,7 @@ body {
     text-align: center;
     letter-spacing: 1px;
     font-family: 'Roboto', sans-serif;
+    color: #fff !important;
     font-size: 500%;
     font-weight: 100;
 }
