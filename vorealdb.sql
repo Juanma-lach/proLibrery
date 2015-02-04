@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost:3307
--- Tiempo de generación: 02-02-2015 a las 04:04:40
+-- Tiempo de generación: 04-02-2015 a las 02:55:03
 -- Versión del servidor: 5.5.39
 -- Versión de PHP: 5.4.33
 
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   `dni` varchar(9) DEFAULT NULL,
   `fecna` date DEFAULT NULL,
   `id_centro` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `cliente`
@@ -74,7 +74,12 @@ INSERT INTO `cliente` (`id`, `nombre`, `poblacion`, `direccion`, `telefono`, `em
 (2, 'Sujaila', 'valencia', 'avda. castellon', 123456789, 'null@voreal.com', '12345678o', '1994-02-10', 2),
 (3, 'Raquel Emperatriz', 'Valencia', 'C/ castan tobenyas', 123456789, 'raquel@voreal.com', '12345678u', '1901-05-27', 1),
 (4, 'Noelia', 'valencia', 'plza. reino', 987654321, 'noelia@voreal.com', '09876543a', '1983-07-12', 1),
-(5, 'Ricardo', 'valencia', 'falla caminou', 987654321, 'richard@voreal.com', '67854353g', '1994-02-04', 2);
+(5, 'Ricardo', 'valencia', 'falla caminou', 987654321, 'richard@voreal.com', '67854353g', '1994-02-04', 2),
+(6, 'Miguel Angel Giner', 'Valencia', 'c/ inventada', 758097646, 'inventado@voreal.com', '56758763q', '1977-11-28', 1),
+(7, 'Pablo Cervera Martin', 'Alicante', 'plza. de alicante', 698734523, 'alicante@voreal.com', '57964797w', '1991-05-15', 2),
+(8, 'Rodrigo Moreno', 'Lisboa', 'c/ de lisboa', 586359875, 'lisboa@voreal.com', '54986479s', '1988-05-15', 1),
+(9, 'Jose Maria Pardo', 'Castellon', 'c/ de castellon', 348567845, 'castellon@voreal.com', '58964797f', '1985-05-15', 1),
+(10, 'Sergio Gomis Garcia', 'Alzira', 'c/ de las mujeres', 587659832, 'sergio@voreal.com', '57654982o', '1993-05-15', 2);
 
 -- --------------------------------------------------------
 
@@ -92,46 +97,13 @@ CREATE TABLE IF NOT EXISTS `objeto` (
 --
 
 INSERT INTO `objeto` (`id`, `descripcion`) VALUES
-(1, 'actividad'),
-(2, 'amigo'),
 (3, 'cliente'),
-(4, 'comentario'),
-(5, 'compra'),
-(6, 'cuestionario'),
-(7, 'detalle_pedido'),
-(8, 'documento'),
-(9, 'entrega'),
-(10, 'estado'),
-(11, 'impuesto'),
-(12, 'mensajeprivado'),
-(13, 'metadocumento'),
-(14, 'metadocumentos'),
 (15, 'objeto'),
-(16, 'opcion'),
 (17, 'operacion'),
-(18, 'ordenador'),
-(19, 'pedido'),
 (20, 'permiso'),
-(21, 'post'),
-(22, 'pregunta'),
-(23, 'producto'),
-(24, 'propuesta'),
-(25, 'proveedor'),
-(26, 'publicacion'),
-(27, 'respuesta'),
-(28, 'tema'),
-(29, 'tipodocumento'),
 (30, 'tipooperacion'),
-(31, 'tipoproducto'),
-(32, 'tipopropuesta'),
-(33, 'tipotema'),
 (34, 'tipousuario'),
-(35, 'usuario'),
-(36, 'tarea'),
-(37, 'tipotarea'),
-(38, 'estadotarea'),
-(39, 'proyecto'),
-(40, 'documentobonito');
+(35, 'usuario');
 
 -- --------------------------------------------------------
 
@@ -630,16 +602,22 @@ CREATE TABLE IF NOT EXISTS `seguimiento` (
   `id_cliente` int(11) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
   `tratamiento` varchar(255) DEFAULT NULL,
-  `precio` int(4) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `precio` double(4,2) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `seguimiento`
 --
 
 INSERT INTO `seguimiento` (`id`, `id_cliente`, `fecha`, `tratamiento`, `precio`) VALUES
-(1, 1, '2015-01-03', '30jc Pecho 28jc filtro 640', 30),
-(2, 1, '2015-01-04', '30jc Pecho 28jc filtro 640', 30);
+(1, 1, '2015-01-03', '30jc Pecho 28jc filtro 640', 30.00),
+(2, 1, '2015-01-04', '30jc Pecho 28jc filtro 640', 30.00),
+(3, 1, '2015-02-06', '30jc Pecho 28jc filtro 640', 30.00),
+(4, 1, '2015-01-07', '30jc Pecho 28jc filtro 640', 30.00),
+(5, 1, '2015-01-10', '30jc Pecho 28jc filtro 640', 30.00),
+(6, 1, '2015-01-11', '30jc Pecho 28jc filtro 640', 30.00),
+(7, 1, '2015-01-15', '30jc Pecho 28jc filtro 640', 30.00),
+(8, 1, '2015-01-27', '30jc Pecho 28jc filtro 640', 30.00);
 
 -- --------------------------------------------------------
 
@@ -681,8 +659,8 @@ CREATE TABLE IF NOT EXISTS `tipousuario` (
 
 INSERT INTO `tipousuario` (`id`, `descripcion`) VALUES
 (1, 'Administrador'),
-(2, 'Usuario'),
-(3, 'Visitante');
+(2, 'Trabajador'),
+(3, 'Centro');
 
 -- --------------------------------------------------------
 
@@ -694,8 +672,8 @@ CREATE TABLE IF NOT EXISTS `tratamiento` (
 `id` int(11) NOT NULL,
   `tipo_tratamiento` varchar(255) DEFAULT NULL,
   `descripcion` varchar(255) DEFAULT NULL,
-  `precio_mujer` int(4) DEFAULT NULL,
-  `precio_hombre` int(4) DEFAULT NULL
+  `precio_mujer` double(4,2) DEFAULT NULL,
+  `precio_hombre` double(4,2) DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
 
 --
@@ -703,48 +681,48 @@ CREATE TABLE IF NOT EXISTS `tratamiento` (
 --
 
 INSERT INTO `tratamiento` (`id`, `tipo_tratamiento`, `descripcion`, `precio_mujer`, `precio_hombre`) VALUES
-(1, 'Radiofrecuencia', 'Lifting facial', 35, 35),
-(2, 'Radiofrecuencia', 'Bio-facial', 35, 35),
-(3, 'Radiofrecuencia', 'Bio-corporal', 35, 35),
-(4, 'Radiofrecuencia', 'Cavitacion', 35, 35),
-(5, 'Radiofrecuencia', 'Radiofrecuencia Bipolar', 35, 35),
-(6, 'Radiofrecuencia', 'Vacuumterapia', 35, 35),
-(7, 'Radiofrecuencia', 'Presoterapia', 19, 19),
-(8, 'Radiofrecuencia', 'Presoterapia + Cavitacion', 45, 45),
-(9, 'Radiofrecuencia', 'Bono 10 sesiones Presoterapia', 140, 140),
-(10, 'Fotodepilacion IPL', 'Axilas', 20, 25),
-(11, 'Fotodepilacion IPL', 'Axilas y Puvis', 55, NULL),
-(12, 'Fotodepilacion IPL', 'Ingles', 20, 25),
-(13, 'Fotodepilacion IPL', 'Ingles Brasileñas', 30, 35),
-(14, 'Fotodepilacion IPL', 'Puvis', 45, NULL),
-(15, 'Fotodepilacion IPL', 'Linea Perianal', 20, 25),
-(16, 'Fotodepilacion IPL', 'Ingles + Axilas', 35, 40),
-(17, 'Fotodepilacion IPL', 'Ingles Brasileñas + Axilas', 35, 40),
-(18, 'Fotodepilacion IPL', 'Piernas Completas', 80, 90),
-(19, 'Fotodepilacion IPL', 'Medias Piernas', 50, 60),
-(20, 'Radiofrecuencia', 'Bioestimulacion', 25, 25),
-(21, 'Fotodepilacion IPL', 'Brazos', 30, 40),
-(22, 'Fotodepilacion IPL', 'Brazos + Manos', 35, 45),
-(23, 'Fotodepilacion IPL', 'Pomulos', 10, 10),
-(24, 'Fotodepilacion IPL', 'Labio', 10, NULL),
-(25, 'Fotodepilacion IPL', 'Menton', 10, NULL),
-(26, 'Fotodepilacion IPL', 'Lumbar', 20, 30),
-(27, 'Fotodepilacion IPL', 'Pecho', 40, 50),
-(28, 'Fotodepilacion IPL', 'Abdomen', 30, 40),
-(29, 'Fotodepilacion IPL', 'Espalda', NULL, 50),
-(30, 'Fotodepilacion IPL', 'Hombros', NULL, 40),
-(31, 'Fotodepilacion IPL', 'Patillas', 15, 15),
-(32, 'Fotodepilacion IPL', 'Facial Completo', 35, 40),
-(33, 'Fotodepilacion IPL', 'Entrecejo', 6, 6),
-(34, 'Fotodepilacion IPL', 'Barba', NULL, 30),
-(35, 'Fotodepilacion IPL', 'Manos', 20, 25),
-(36, 'Fotodepilacion IPL', 'Linea Alba', 15, 20),
-(37, 'Fotodepilacion IPL', 'Gluteos', 35, 45),
-(38, 'Fotodepilacion IPL', 'Pies', 20, 25),
-(39, 'Fotodepilacion IPL', 'Foto rejuvenecimiento IPL', 35, 35),
-(40, 'Fotodepilacion IPL', 'Tratamiento Acne IPL', 35, 35),
-(41, 'Fotodepilacion IPL', 'Tratamiento Manchas IPL', 35, 35),
-(42, 'Fotodepilacion IPL', 'Cuperosis IPL (Capilares)', 35, 35);
+(1, 'Radiofrecuencia', 'Lifting facial', 35.00, 35.00),
+(2, 'Radiofrecuencia', 'Bio-facial', 35.00, 35.00),
+(3, 'Radiofrecuencia', 'Bio-corporal', 35.00, 35.00),
+(4, 'Radiofrecuencia', 'Cavitacion', 35.00, 35.00),
+(5, 'Radiofrecuencia', 'Radiofrecuencia Bipolar', 35.00, 35.00),
+(6, 'Radiofrecuencia', 'Vacuumterapia', 35.00, 35.00),
+(7, 'Radiofrecuencia', 'Presoterapia', 19.00, 19.00),
+(8, 'Radiofrecuencia', 'Presoterapia + Cavitacion', 45.00, 45.00),
+(9, 'Radiofrecuencia', 'Bono 10 sesiones Presoterapia', 140.00, 140.00),
+(10, 'Fotodepilacion IPL', 'Axilas', 20.00, 25.00),
+(11, 'Fotodepilacion IPL', 'Axilas y Puvis', 55.00, NULL),
+(12, 'Fotodepilacion IPL', 'Ingles', 20.00, 25.00),
+(13, 'Fotodepilacion IPL', 'Ingles Brasileñas', 30.00, 35.00),
+(14, 'Fotodepilacion IPL', 'Puvis', 45.00, NULL),
+(15, 'Fotodepilacion IPL', 'Linea Perianal', 20.00, 25.00),
+(16, 'Fotodepilacion IPL', 'Ingles + Axilas', 35.00, 40.00),
+(17, 'Fotodepilacion IPL', 'Ingles Brasileñas + Axilas', 35.00, 40.00),
+(18, 'Fotodepilacion IPL', 'Piernas Completas', 80.00, 90.00),
+(19, 'Fotodepilacion IPL', 'Medias Piernas', 50.00, 60.00),
+(20, 'Radiofrecuencia', 'Bioestimulacion', 25.00, 25.00),
+(21, 'Fotodepilacion IPL', 'Brazos', 30.00, 40.00),
+(22, 'Fotodepilacion IPL', 'Brazos + Manos', 35.00, 45.00),
+(23, 'Fotodepilacion IPL', 'Pomulos', 10.00, 10.00),
+(24, 'Fotodepilacion IPL', 'Labio', 10.00, NULL),
+(25, 'Fotodepilacion IPL', 'Menton', 10.00, NULL),
+(26, 'Fotodepilacion IPL', 'Lumbar', 20.00, 30.00),
+(27, 'Fotodepilacion IPL', 'Pecho', 40.00, 50.00),
+(28, 'Fotodepilacion IPL', 'Abdomen', 30.00, 40.00),
+(29, 'Fotodepilacion IPL', 'Espalda', NULL, 50.00),
+(30, 'Fotodepilacion IPL', 'Hombros', NULL, 40.00),
+(31, 'Fotodepilacion IPL', 'Patillas', 15.00, 15.00),
+(32, 'Fotodepilacion IPL', 'Facial Completo', 35.00, 40.00),
+(33, 'Fotodepilacion IPL', 'Entrecejo', 6.00, 6.00),
+(34, 'Fotodepilacion IPL', 'Barba', NULL, 30.00),
+(35, 'Fotodepilacion IPL', 'Manos', 20.00, 25.00),
+(36, 'Fotodepilacion IPL', 'Linea Alba', 15.00, 20.00),
+(37, 'Fotodepilacion IPL', 'Gluteos', 35.00, 45.00),
+(38, 'Fotodepilacion IPL', 'Pies', 20.00, 25.00),
+(39, 'Fotodepilacion IPL', 'Foto rejuvenecimiento IPL', 35.00, 35.00),
+(40, 'Fotodepilacion IPL', 'Tratamiento Acne IPL', 35.00, 35.00),
+(41, 'Fotodepilacion IPL', 'Tratamiento Manchas IPL', 35.00, 35.00),
+(42, 'Fotodepilacion IPL', 'Cuperosis IPL (Capilares)', 35.00, 35.00);
 
 -- --------------------------------------------------------
 
@@ -756,21 +734,20 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 `id` int(6) NOT NULL COMMENT 'Identificador',
   `login` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Nombre de usuario',
   `password` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Contraseña',
+  `nombreComp` text COLLATE utf8_unicode_ci,
+  `dni` varchar(9) COLLATE utf8_unicode_ci DEFAULT NULL,
   `id_tipousuario` int(11) DEFAULT NULL COMMENT 'Tipo de usuario',
-  `id_estado` int(11) DEFAULT NULL COMMENT 'Estado',
-  `ciudad` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Ciudad',
-  `firma` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Firma',
   `skin` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Plantilla'
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `login`, `password`, `id_tipousuario`, `id_estado`, `ciudad`, `firma`, `skin`) VALUES
-(1, 'pepe', 'pepe', 2, 1, 'Valencia', 'is my life and do what I want', 'main'),
-(3, 'maria', 'maria', 3, 6, 'Barcelona', 'If you love something, set it free. Unless it''''s a tiger.', 'main'),
-(11, 'rafael', 'rafael', 1, 17, 'A Coruña', 'Ista ye a mia tierra, a mia fabla', 'main');
+INSERT INTO `usuario` (`id`, `login`, `password`, `nombreComp`, `dni`, `id_tipousuario`, `skin`) VALUES
+(1, 'pepe', 'pepe', 'Pepe Garcia Molino', '56776676t', 2, 'main'),
+(3, 'maria', 'maria', 'Maria Fuster Canyadas', '44353334o', 3, 'main'),
+(11, 'rafael', 'rafael', 'Rafael Lopez Giner', '76977787j', 1, 'main');
 
 --
 -- Índices para tablas volcadas
@@ -843,7 +820,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `operacion`
 --
@@ -858,7 +835,7 @@ MODIFY `id` int(6) NOT NULL AUTO_INCREMENT COMMENT 'ID Permiso',AUTO_INCREMENT=7
 -- AUTO_INCREMENT de la tabla `seguimiento`
 --
 ALTER TABLE `seguimiento`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de la tabla `tipooperacion`
 --
@@ -878,7 +855,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=43;
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-MODIFY `id` int(6) NOT NULL AUTO_INCREMENT COMMENT 'Identificador',AUTO_INCREMENT=31;
+MODIFY `id` int(6) NOT NULL AUTO_INCREMENT COMMENT 'Identificador',AUTO_INCREMENT=12;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
