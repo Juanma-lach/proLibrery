@@ -22,9 +22,12 @@
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Objetos <b class="caret"></b></a>
     <ul class="dropdown-menu">
         <li class="dropdown-header">Gestión de usuarios</li>
-        <li><a href="jsp#/usuario">Usuario</a></li>
+        <li><a href="jsp#/usuario">Usuarios</a></li>
         <li class="divider"></li>
-        <li class="dropdown-header">División</li>     
+        <li class="dropdown-header">Más contenido</li>  
+        <li><a href="jsp#/libro">Libros</a></li>  
+        <li><a href="jsp#/usuario">Clientes</a></li>
+
     </ul>
 </li>    
 

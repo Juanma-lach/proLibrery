@@ -77,3 +77,16 @@ th{
     background-color: white;
     color: black;
 }
+
+.navbar-inverse{
+    background-color: #176185 !important;
+    color: white;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+body {
+    background-color: white;
+}

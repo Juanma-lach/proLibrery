@@ -1,5 +1,5 @@
-/*
- * Copyright (C) July 2014 Rafael Aznar
+/* 
+ * Copyright (C) 2014 rafa
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,15 +15,12 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package net.daw.helper;
 
-/**
- *
- * @author rafa
- */
-public class AppInformationHelper {
-
-    public static String getAppName() {
-        return "ProLibrery";
-    }
-}
+var libroControl = function (strClase) {
+    this.clase = strClase;
+};
+libroControl.prototype = new control('libro');
+libroControl.prototype.getClassNameLibro = function () {
+    return this.getClassName() + "Control";
+};
+var oLibroControl = new libroControl('libro');

@@ -27,10 +27,20 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import net.daw.control.operation.generic.specific.implementation.ClienteControlOperationGenSpImpl;
+import net.daw.control.operation.generic.specific.implementation.CompraControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.EstadoControlOperationGenSpImpl;
+import net.daw.control.operation.generic.specific.implementation.LibroControlOperationGenSpImpl;
+import net.daw.control.operation.generic.specific.implementation.StockControlOperationGenSpImpl;
+import net.daw.control.operation.generic.specific.implementation.TipoclienteControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.TipousuarioControlOperationGenSpImpl;
 import net.daw.control.operation.generic.specific.implementation.UsuarioControlOperationGenSpImpl;
+import net.daw.control.route.generic.specific.implementation.ClienteControlRouteGenSpImpl;
+import net.daw.control.route.generic.specific.implementation.CompraControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.EstadoControlRouteGenSpImpl;
+import net.daw.control.route.generic.specific.implementation.LibroControlRouteGenSpImpl;
+import net.daw.control.route.generic.specific.implementation.StockControlRouteGenSpImpl;
+import net.daw.control.route.generic.specific.implementation.TipoclienteControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.TipousuarioControlRouteGenSpImpl;
 import net.daw.control.route.generic.specific.implementation.UsuarioControlRouteGenSpImpl;
 import net.daw.helper.EstadoHelper;
@@ -90,6 +100,31 @@ public class JsonControl extends HttpServlet {
                         UsuarioControlRouteGenSpImpl oUsuarioRoute = new UsuarioControlRouteGenSpImpl();
                         UsuarioControlOperationGenSpImpl oUsuarioControlOperation = new UsuarioControlOperationGenSpImpl(request);
                         jsonResult = oUsuarioRoute.execute(request, oUsuarioControlOperation);
+                        break;
+                    case "tipocliente":
+                        TipoclienteControlRouteGenSpImpl oTipoclienteRoute = new TipoclienteControlRouteGenSpImpl();
+                        TipoclienteControlOperationGenSpImpl oTipoclienteControlOperation = new TipoclienteControlOperationGenSpImpl(request);
+                        jsonResult = oTipoclienteRoute.execute(request, oTipoclienteControlOperation);
+                        break;
+                    case "cliente":
+                        ClienteControlRouteGenSpImpl oClienteRoute = new ClienteControlRouteGenSpImpl();
+                        ClienteControlOperationGenSpImpl oClienteControlOperation = new ClienteControlOperationGenSpImpl(request);
+                        jsonResult = oClienteRoute.execute(request, oClienteControlOperation);
+                        break;
+                    case "compra":
+                        CompraControlRouteGenSpImpl oCompraRoute = new CompraControlRouteGenSpImpl();
+                        CompraControlOperationGenSpImpl oCompraControlOperation = new CompraControlOperationGenSpImpl(request);
+                        jsonResult = oCompraRoute.execute(request, oCompraControlOperation);
+                        break;
+                    case "libro":
+                        LibroControlRouteGenSpImpl oLibroRoute = new LibroControlRouteGenSpImpl();
+                        LibroControlOperationGenSpImpl oLibroControlOperation = new LibroControlOperationGenSpImpl(request);
+                        jsonResult = oLibroRoute.execute(request, oLibroControlOperation);
+                        break;
+                    case "stock":
+                        StockControlRouteGenSpImpl oStockRoute = new StockControlRouteGenSpImpl();
+                        StockControlOperationGenSpImpl oStockControlOperation = new StockControlOperationGenSpImpl(request);
+                        jsonResult = oStockRoute.execute(request, oStockControlOperation);
                         break;
                     case "estado":
                         EstadoControlRouteGenSpImpl oEstadoRoute = new EstadoControlRouteGenSpImpl();

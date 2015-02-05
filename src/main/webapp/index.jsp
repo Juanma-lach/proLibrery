@@ -32,9 +32,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- Metro Bootstrapt -->
+        <!-- Angular Material Design -->
+        <!-- Angulars Material CSS now available via Google CDN; version 0.7 used here -->
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.7.0/angular-material.min.css">
+        <!-- Metro Bootstrapt 
         <link rel="stylesheet" href="css/metro-bootstrap.min.css">
-        <link rel="stylesheet" href="css/metro-bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/metro-bootstrap-responsive.min.css">-->
         <link href="css/iconFont.min.css" rel="stylesheet">
 
         <% if (user != null) {%>
@@ -45,9 +48,9 @@
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
-        
+
         <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
-        
+
         <!-- FAlTA --><link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/bootstrapValidator.min.css">
         <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css"  />
@@ -67,13 +70,13 @@
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand btn btn-inverse view" href="jsp?ob=usuario&op=menu"><i class="icon-home"></i></a>
+                    <a  class="navbar-brand btn btn-inverse view" href="jsp"><%=AppInformationHelper.getAppName()%></a>
+                    <a id="app" class="navbar-brand " href="jsp?ob=usuario&op=menu"><i class="icon-home"></i></a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a id="app" class="navbar-brand" href="jsp"><%=AppInformationHelper.getAppName()%></a>
                 </div>
                 <div class="collapse navbar-collapse">
 
@@ -148,7 +151,7 @@
         <script type="text/javascript"  src="./js/vendor/bootstrapValidator.min.js"></script>
         <script type="text/javascript"  src="./js/vendor/language/es_ES.js"></script>
         <script type="text/javascript"  src="./js/vendor/creole-parser.js"></script>
-        
+
         <script type="text/javascript"  src="./js/vendor/metro.min.js"></script>
 
 
@@ -186,6 +189,31 @@
         <script src="js/specific/tipousuario/view.js" charset="UTF-8"></script>
         <script src="js/specific/tipousuario/routes.js" charset="UTF-8"></script>
 
+        <script src="js/specific/tipocliente/control.js" charset="UTF-8"></script>
+        <script src="js/specific/tipocliente/model.js" charset="UTF-8"></script>
+        <script src="js/specific/tipocliente/view.js" charset="UTF-8"></script>
+        <script src="js/specific/tipocliente/routes.js" charset="UTF-8"></script>
+
+        <script src="js/specific/cliente/control.js" charset="UTF-8"></script>
+        <script src="js/specific/cliente/model.js" charset="UTF-8"></script>
+        <script src="js/specific/cliente/view.js" charset="UTF-8"></script>
+        <script src="js/specific/cliente/routes.js" charset="UTF-8"></script>
+
+        <script src="js/specific/compra/control.js" charset="UTF-8"></script>
+        <script src="js/specific/compra/model.js" charset="UTF-8"></script>
+        <script src="js/specific/compra/view.js" charset="UTF-8"></script>
+        <script src="js/specific/compra/routes.js" charset="UTF-8"></script>
+
+        <script src="js/specific/libro/control.js" charset="UTF-8"></script>
+        <script src="js/specific/libro/model.js" charset="UTF-8"></script>
+        <script src="js/specific/libro/view.js" charset="UTF-8"></script>
+        <script src="js/specific/libro/routes.js" charset="UTF-8"></script>
+
+        <script src="js/specific/stock/control.js" charset="UTF-8"></script>
+        <script src="js/specific/stock/model.js" charset="UTF-8"></script>
+        <script src="js/specific/stock/view.js" charset="UTF-8"></script>
+        <script src="js/specific/stock/routes.js" charset="UTF-8"></script>
+
         <script type="text/javascript">
 
             //path = '<%=request.getContextPath()%>';
@@ -200,6 +228,7 @@
 
                 fUsuarioRoutes();
                 fTipousuarioRoutes();
+                fLibroRoutes();
 
                 Path.listen();
 
