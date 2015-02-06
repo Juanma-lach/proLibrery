@@ -10,24 +10,27 @@
 <div class="margen-superior">
     <% if (oUsuario.getId_tipousuario() == 1) { %>
 
-    <div class="">
-        <div>
-            <md-button class="md-primary">I will be blue (by default)</md-button>
-            <div md-theme="altTheme">
-                <md-button class="md-primary">I will be purple (altTheme)</md-button>
+    <div class="container">
+        <div class="row">
+            <h1>Panel de Administración</h1>
+            <div class="row centered">
+                <a title="Ver libros" href="jsp#/libro"><div class="col-lg-5 col-sm-6 col-xs-12 bordered"><p>Ver todos los libros</p></div></a>
+                <a title="Buscar libros" href="#"><div class="col-lg-5 col-sm-6 col-xs-12 bordered"><p>Buscar libro</p></div></a>
+                <a title="Añadir libros" href="#"><div class="col-lg-5 col-sm-6 col-xs-12 bordered"><p>Añadir un libro</p></div></a>
+                <a title="Añadir una oferta" href="#"><div class="col-lg-5 col-sm-6 col-xs-12 bordered"><p>Añadir una oferta</p></div></a>
+                <a title="Gestion de usuarios" href="jsp#/usuario"><div class="col-lg-5 col-sm-6 col-xs-12 bordered"><p>Gestión de usuarios</p></div></a>
+                <a title="Ver transacciones" href="#"><div class="col-lg-5 col-sm-6 col-xs-12 bordered"><p>Ver transacciones</p></div></a>
             </div>
+            <hr>
         </div>
-
-
-        <!-- Angular Material Dependencies -->
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
-
-
-        <!-- Angular Material Javascript now available via Google CDN; version 0.7 used here -->
-        <script src="//ajax.googleapis.com/ajax/libs/angular_material/0.7.0/angular-material.min.js"></script>
     </div>
+
+
+
+    <!-- script references -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
 
     <% }%>
 </div>

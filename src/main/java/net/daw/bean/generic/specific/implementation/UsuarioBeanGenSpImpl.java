@@ -31,10 +31,10 @@ public class UsuarioBeanGenSpImpl extends BeanGenImpl implements BeanInterface {
     private Integer id_tipousuario = 0; //importante inicializar a 0 las claves ajenas
     @Expose(deserialize = false)
     private TipousuarioBeanGenSpImpl obj_tipousuario = null;
-    @Expose(serialize = false)
+    /*@Expose(serialize = false)
     private Integer id_estado = 0; //importante inicializar a 0 las claves ajenas
     @Expose(deserialize = false)
-    private EstadoBeanGenSpImpl obj_estado = null;
+    private EstadoBeanGenSpImpl obj_estado = null;*/
     @Expose
     private String ciudad = "";
     @Expose
@@ -74,7 +74,7 @@ public class UsuarioBeanGenSpImpl extends BeanGenImpl implements BeanInterface {
         this.obj_tipousuario = obj_tipousuario;
     }
 
-    public Integer getId_estado() {
+    /*public Integer getId_estado() {
         return id_estado;
     }
 
@@ -88,7 +88,7 @@ public class UsuarioBeanGenSpImpl extends BeanGenImpl implements BeanInterface {
 
     public void setObj_estado(EstadoBeanGenSpImpl obj_estado) {
         this.obj_estado = obj_estado;
-    }
+    }*/
 
     public String getCiudad() {
         return ciudad;

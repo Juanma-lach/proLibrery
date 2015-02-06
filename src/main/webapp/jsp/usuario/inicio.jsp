@@ -30,8 +30,8 @@
 </div>-->
 <div id="intro">
     <h1>
-        Voreal<br/>
-        <span>Luce como tu quieras</span>
+        ProLibrery<br/>
+        <span>Tus libros al alcance de la mano.</span>
     </h1>
 </div>
 

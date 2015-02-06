@@ -101,7 +101,7 @@
             <!--<div class="col-md-2" id="menuLateral">
             <jsp:include page="jsp/menuLateral.jsp" />
         </div>-->
-            <div class="col-md-10 col-md-offset-1 metro">
+            <div class="col-md-10 col-md-offset-1">
                 <div id="indexContenido"></div>
                 <div id="indexContenidoJsp">
                     <jsp:include page='<%=(String) request.getAttribute("contenido")%>' />                
@@ -112,7 +112,7 @@
             <div class="col-md-12" id="contenidoParseado"></div>   
         </div>
         <div class="row">
-            <div class="col-md-12"><hr><footer><p class="pull-right">&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></footer></div> 
+            <div class="col-md-10 col-md-offset-1"><hr><footer><p class="pull-right">&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></footer></div> 
         </div>
 
 
@@ -130,7 +130,7 @@
             <div class="col-md-12" id="contenidoParseado"></div>   
         </div>
         <div class="row">
-            <div class="col-md-12"><hr><footer><p class="pull-right">&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></footer></div>   
+            <div class="col-md-10 col-md-offset-1"><hr><footer><p class="pull-right">&copy; <%=EstadoHelper.getAutor()%>: <%=EstadoHelper.getMailAutor()%> (<%=EstadoHelper.getAnyo()%>) - <%=EstadoHelper.getLicenciaLink()%></p></footer></div>   
         </div>
 
 
