@@ -32,14 +32,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- Angular Material Design -->
-        <!-- Angulars Material CSS now available via Google CDN; version 0.7 used here -->
-        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.7.0/angular-material.min.css">
-        <!-- Metro Bootstrapt 
-        <link rel="stylesheet" href="css/metro-bootstrap.min.css">
-        <link rel="stylesheet" href="css/metro-bootstrap-responsive.min.css">-->
-        <link href="css/iconFont.min.css" rel="stylesheet">
-
         <% if (user != null) {%>
         <link rel="stylesheet" href="css/skin/<%=user.getSkin()%>.css"> 
         <% } else {%>
@@ -60,6 +52,10 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        
+        
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/style.css" />
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -70,8 +66,8 @@
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a  class="navbar-brand btn btn-inverse view" href="jsp"><%=AppInformationHelper.getAppName()%></a>
-                    <a id="app" class="navbar-brand " href="jsp?ob=usuario&op=menu"><i class="icon-home"></i></a>
+                    <a  class="navbar-brand btn-inverse view" href="jsp"><%=AppInformationHelper.getAppName()%></a>
+                    <a id="app" class="navbar-brand " href="jsp?ob=usuario&op=menu"><i class="glyphicon glyphicon-home"></i></a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -152,7 +148,7 @@
         <script type="text/javascript"  src="./js/vendor/language/es_ES.js"></script>
         <script type="text/javascript"  src="./js/vendor/creole-parser.js"></script>
 
-        <script type="text/javascript"  src="./js/vendor/metro.min.js"></script>
+        <!--<script type="text/javascript"  src="./js/vendor/metro.min.js"></script>-->
 
 
         <!--

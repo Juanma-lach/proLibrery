@@ -19,7 +19,7 @@
 
 
 <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Objetos <b class="caret"></b></a>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tablas <b class="caret"></b></a>
     <ul class="dropdown-menu">
         <li class="dropdown-header">Gestión de usuarios</li>
         <li><a href="jsp#/usuario">Usuarios</a></li>
