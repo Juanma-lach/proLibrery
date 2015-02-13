@@ -21,7 +21,7 @@
         int id = user.getId();
 %>
 
-<form class="form-horizontal" role="form" action="#" id="usuarioForm" name="formulario">
+<form class="form-horizontal" role="form" action="#" id="libroForm" name="formulario">
     <div class="form-group">
         <label class="col-sm-2 control-label" for="id">Id:</label>
         <div class="col-sm-2">
@@ -29,51 +29,26 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="col-sm-2 control-label"  for="login">Nombre de Usuario:</label>
+        <label class="col-sm-2 control-label"  for="titulo">Título:</label>
         <div class="col-sm-6">
-            <input type="text" id="login" class="form-control"  name="login" size="15" placeholder="Pon aquí tu nombre de usuario" />
+            <input type="text" id="titulo" class="form-control"  name="titulo" size="15" placeholder="Introduce el título del libro" />
         </div>
     </div>
     <div class="form-group">
-        <label class="col-sm-2 control-label"  for="password">Contraseña:</label>
+        <label class="col-sm-2 control-label"  for="isbn">ISBN:</label>
         <div class="col-sm-6">
-            <input type="text" id="password" class="form-control"  name="password" size="15" placeholder="Pon aquí tu contraseña" />
+            <input type="text" id="isbn" class="form-control"  name="isbn" size="15" placeholder="Introduce el código ISBN" />
         </div>
     </div>
+   
+    <div class="form-group">
+        <label class="col-sm-2 control-label"  for="editorial">Editorial:</label>
+        <div class="col-sm-10">
+            <input type="text"  class="form-control"  id="editorial" name="editorial" size="15" placeholder="Introduce la editorial del libro" />
+        </div>
+    </div>
+
     
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label" for="obj_tipousuario_id">Tipo de usuario: </label> 
-        <div class="col-sm-2">              
-            <input readonly="true"  class="form-control"  id="obj_tipousuario_id" class="input-mini" name="id_tipousuario" type="text" size="5" maxlength="5" />  
-        </div>
-        <div class="col-sm-1">              
-            <a class="btn btn-primary btn-sm" id="obj_tipousuario_button" href="#"><i class="glyphicon glyphicon-search"></i></a>
-        </div>        
-        <label class="col-sm-7" for="obj_usuario_desc" id="obj_tipousuario_desc"></label>                     
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label"  for="ciudad">Ciudad:</label>
-        <div class="col-sm-10">
-            <input type="text"  class="form-control"  id="ciudad" name="ciudad" size="15" placeholder="¿Dónde vives?" />
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label"  for="firma">Firma:</label>
-        <div class="col-sm-10">
-            <input type="text"  class="form-control"  id="firma" name="firma" size="15" placeholder="Ponga una firma" />
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label"  for="skin">Skin:</label>
-        <div class="col-sm-10">
-            <input type="text"  class="form-control"  id="skin" name="skin" size="15" placeholder="Plantilla" />
-        </div>
-    </div>    
-
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <div id="messages"></div>
@@ -92,18 +67,9 @@
 <script type="text/javascript">
 
     $(document).ready(function() {
-        $('#alta_group').datetimepicker({
-            pickTime: false,
-            language: 'es',
-            showToday: true
-        });
-        $('#cambio_group').datetimepicker({
-            pickTime: false,
-            language: 'es',
-            showToday: true
-        });
+        
         //http://jqueryvalidation.org/documentation/
-        $('#usuarioForm')
+        $('#libroForm')
                 .bootstrapValidator({
                     container: '#messages',
                     feedbackIcons: {
@@ -123,101 +89,24 @@
                                 }
                             }
                         },
-                        contenido: {
+                        isbn:{
                             validators: {
                                 notEmpty: {
-                                    message: 'Debe introducir contenido'
+                                    message: 'Debe introducir un ISBN'
                                 }
                             }
-                        },
-                        alta_group: {
+                        },                    
+                        editorial: {
                             validators: {
                                 notEmpty: {
-                                    message: 'Debe introducir una fecha de alta'
+                                    message: 'Debe introducir una editorial'
                                 },
-                                date: {
-                                    format: 'DD/MM/YYYY',
-                                    message: 'La fecha de alta no tiene formato DD/MM/YYYY'
-                                }
-                            }
-                        },
-                        cambio_group: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'Debe introducir una fecha de cambio'
-                                },
-                                date: {
-                                    format: 'DD/MM/YYYY',
-                                    message: 'La fecha de cambio no tiene formato DD/MM/YYYY'
-                                }
-                            }
-                        },
-                        hits: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'Debe introducir un número de hits'
-                                },
-                                integer: {
-                                    message: 'El valor de hits debe ser un entero'
-                                },
-                                between: {
-                                    min: -0,
-                                    max: 99999999,
-                                    message: 'El número de hits debe ser un entero entre 0 y 99999999'
-                                }
-                            }
-
-                        },
-                        id_usuario: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'Debe elegir un usuario'
-                                },
-                                integer: {
-                                    message: 'El identificador de usuario debe ser un entero'
-                                }
-                            }
-                        },
-                        id_tipousuario: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'Debe elegir un tipo de usuario'
-                                },
-                                integer: {
-                                    message: 'El identificador de tipo de usuario debe ser un entero'
-                                }
-                            }
-                        },
-                        etiquetas: {
-                            validators: {
-                                notEmpty: {
-                                    message: 'Debe introducir una etiqueta'
-                                },
-                                stringLength: {
-                                    max: 100,
-                                    message: 'La longitud de las etiquetas debe ser de 100 caracteres como mucho'
-                                }
                             }
                         }
 
                     }
-                })
-                .on('change', '[name="id_usuario"]', function() {
-                    $('#usuarioForm').bootstrapValidator('revalidateField', 'id_usuario');
-                })
-
-                .on('change', '[name="id_tipousuario"]', function() {
-                    $('#usuarioForm').bootstrapValidator('revalidateField', 'id_tipousuario');
-                })
-                ;
-        $('#alta_group').on('dp.change dp.show', function(e) {
-// Revalidate the date when user change it
-            $('#usuarioForm').bootstrapValidator('revalidateField', 'alta_group');
-        });
-        $('#cambio_group').on('dp.change dp.show', function(e) {
-// Revalidate the date when user change it
-            $('#usuarioForm').bootstrapValidator('revalidateField', 'cambio_group');
-        });
+                });
+                
     });       
 
     

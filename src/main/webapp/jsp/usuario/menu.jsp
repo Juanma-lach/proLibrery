@@ -22,7 +22,7 @@
 
         <h1>Panel de Administración</h1>
         <!-- Pullup Card -->
-        <div class="col s12 m4">
+        <div class="col s12 m3">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="css/images/prueba.jpg">
@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m3">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="css/images/prueba.jpg">
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m3">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="css/images/prueba.jpg">
@@ -67,7 +67,7 @@
                 </div>
             </div>
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m3">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="css/images/prueba.jpg">
@@ -82,7 +82,7 @@
                 </div>
             </div>
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m3">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="css/images/prueba.jpg">
@@ -97,7 +97,7 @@
                 </div>
             </div>
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m3">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="css/images/prueba.jpg">

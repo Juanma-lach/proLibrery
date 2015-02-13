@@ -45,7 +45,7 @@
     <div class="form-group">
         <label class="col-sm-2 control-label" for="obj_tipousuario_id">Tipo de usuario: </label> 
         <div class="col-sm-2">              
-            <input readonly="true"  class="form-control"  id="obj_tipousuario_id" class="input-mini" name="id_tipousuario" type="text" size="5" maxlength="5" />  
+            <input  class="form-control"  id="obj_tipousuario_id" class="input-mini" name="id_tipousuario" type="text" size="5" maxlength="5" />  
         </div>
         <div class="col-sm-1">              
             <a class="btn btn-primary btn-sm" id="obj_tipousuario_button" href="#"><i class="glyphicon glyphicon-search"></i></a>

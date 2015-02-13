@@ -19,7 +19,7 @@
 <%@page import="net.daw.helper.EstadoHelper"%>
 <div class="container margen-superior">
     <div class="row">
-        <div class="col-sm-6 col-md-4 col-md-offset-4">
+        <div class="m12">
             <img class="pull-left" src="fonts/user.png" alt="user image" style="padding: 20px 10px 5px 0" />
             <h1>Formulario de entrada al sistema</h1>
             <form class="form-signin" id="loginForm" action="jsp" role="form" method="post">                                    

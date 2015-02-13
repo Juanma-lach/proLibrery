@@ -142,3 +142,17 @@ th{
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
     background-color: #3C759B;
 }
+
+.btn-group > .btn {
+    height: 30px;
+    margin-bottom: 0;
+    margin-left: 1px !important;
+}
+
+.table > thead > tr > th{
+    border-top: 2px solid #ddd !important;
+}
+
+.card .card-title {
+    font-size: 14px !important;
+}
