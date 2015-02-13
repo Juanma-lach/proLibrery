@@ -210,6 +210,11 @@
         <script src="js/specific/stock/view.js" charset="UTF-8"></script>
         <script src="js/specific/stock/routes.js" charset="UTF-8"></script>
 
+        
+        
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="css/js/materialize.min.js"></script>
+        
         <script type="text/javascript">
 
             //path = '<%=request.getContextPath()%>';

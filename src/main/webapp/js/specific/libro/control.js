@@ -24,3 +24,13 @@ libroControl.prototype.getClassNameLibro = function () {
     return this.getClassName() + "Control";
 };
 var oLibroControl = new libroControl('libro');
+
+libroControl.prototype.listar = function (place, oModel, oView) {
+    var thisObject = this;
+    $(place).empty();
+    var oLibroModel = oModel;
+    var oLibroView = oView;
+    data = oLibroModel.setGenericOperation("getpage&rpp=5000","");
+    listadoLibros = oLibroView.getLibrosList(data);
+    $("#contenidoParseado").html(listadoLibros);
+};

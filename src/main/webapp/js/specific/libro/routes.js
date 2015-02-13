@@ -81,4 +81,11 @@ function fLibroRoutes() {
         $('#indexContenidoJsp').empty();
         return false;
     });
+    Path.map("#/libro/libros").to(function () {
+        $('#indexContenidoJsp').spinner();
+        //var paramsObject = param().defaultizeUrlObjectParameters(param().getUrlObjectFromUrlString(this.params['url']));
+        oLibroControl.listar($('#indexContenido'), oLibroModel, oLibroView);
+        $('#indexContenidoJsp').empty();
+        return false;
+    });
 }
