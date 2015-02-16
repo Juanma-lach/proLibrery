@@ -34,22 +34,23 @@ libroView.prototype.okValidation = function (f) {
 libroView.prototype.getLibrosList = function (jason) {
     var long = jason.list.length;
     listado = "<div class='m12'>";
+    imagen = "css/images/prueba.jpg";
     for (i = 0; i < long; i++) {
         titulo = jason.list[i].titulo;
         isbn = jason.list[i].isbn;
         editorial = jason.list[i].editorial;
         listado += "<div class='col s12 m3'>";
         listado += "<div class='card'>";
-        listado += "<div class='card-image waves-effect waves-block waves-light>";
-        listado += "<img class='activator' src='http://planetadelibrosmexico.com/wp-content/uploads/2015/01/libros1.jpg' />";
+        listado += "<div class='card-image waves-effect waves-block waves-light'>";
+        listado += "<img class='activator' src="+imagen+" />";
         listado += "</div>";
         listado += "<div class='card-content'>";
-        listado += "<span class='card-title activator'>" + titulo +
+        listado += "<span class='card-title activator'>" + titulo.replace("%20"," ") +
                 "<i class='mdi-navigation-more-vert right'></i></span></div>";
         listado += "<div class='card-reveal' style='transform: translateY(0px);'>"
-        listado += "<span class='card-title'>Lista de todos los libros";
+        listado += "<span class='card-title'>"+ titulo.replace("%20"," ");
         listado += "<i class='mdi-navigation-close right'></i></span>";
-        listado += "<p>" + editorial + "</p><p>" + isbn + "</p></div>";
+        listado += "<p>EDITORIAL: " + editorial + "</p><p> ISBN: " + isbn + "</p></div>";
         listado += "</div>";
         listado += "</div>";
     }

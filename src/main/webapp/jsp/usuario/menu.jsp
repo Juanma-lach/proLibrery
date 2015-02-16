@@ -29,7 +29,7 @@
                 </div>
                 <div class="card-content">
                     <span class="card-title activator">Ver todos los libros<i class="mdi-navigation-more-vert right"></i></span>
-                    <p><a href="jsp#/libro">Ir</a></p>
+                    <p><a href="jsp#/libro/libros">Ir</a></p>
                 </div>
                 <div class="card-reveal" style="transform: translateY(0px);">
                     <span class="card-title">Lista de todos los libros <i class="mdi-navigation-close right"></i></span>
