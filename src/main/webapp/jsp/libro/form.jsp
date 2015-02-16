@@ -18,7 +18,7 @@
 <%@page import="net.daw.bean.generic.specific.implementation.UsuarioBeanGenSpImpl"%>
 <%UsuarioBeanGenSpImpl user = (UsuarioBeanGenSpImpl) request.getSession().getAttribute("usuarioBean");%>
 <%
-        int id = user.getId();
+    int id = user.getId();
 %>
 
 <form class="form-horizontal" role="form" action="#" id="libroForm" name="formulario">
@@ -40,7 +40,7 @@
             <input type="text" id="isbn" class="form-control"  name="isbn" size="15" placeholder="Introduce el código ISBN" />
         </div>
     </div>
-   
+
     <div class="form-group">
         <label class="col-sm-2 control-label"  for="editorial">Editorial:</label>
         <div class="col-sm-10">
@@ -48,7 +48,7 @@
         </div>
     </div>
 
-    
+
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <div id="messages"></div>
@@ -62,12 +62,12 @@
     </div>
 
 </form>
-        
+
 
 <script type="text/javascript">
 
-    $(document).ready(function() {
-        
+    $(document).ready(function () {
+
         //http://jqueryvalidation.org/documentation/
         $('#libroForm')
                 .bootstrapValidator({
@@ -89,27 +89,26 @@
                                 }
                             }
                         },
-                        isbn:{
+                        isbn: {
                             validators: {
                                 notEmpty: {
                                     message: 'Debe introducir un ISBN'
                                 }
                             }
-                        },                    
+                        },
                         editorial: {
                             validators: {
                                 notEmpty: {
                                     message: 'Debe introducir una editorial'
-                                },
+                                }
                             }
                         }
 
                     }
                 });
-                
-    });       
 
-    
-    
+    });
+
+
+
 </script>
-     

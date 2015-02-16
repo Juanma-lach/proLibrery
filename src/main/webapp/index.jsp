@@ -44,7 +44,7 @@
         <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
 
         <!-- FAlTA --><link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/bootstrapValidator.min.css">
+        <!-- <link rel="stylesheet" href="css/bootstrapValidator.min.css"> -->
         <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css"  />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -144,24 +144,11 @@
         <script type="text/javascript"  src="./js/vendor/bootstrap-datetimepicker.min.js"></script>
 
         <script type="text/javascript"  src="./js/vendor/path.min.js"></script> 
-        <script type="text/javascript"  src="./js/vendor/bootstrapValidator.min.js"></script>
+        
+        <script type="text/javascript"  src="./js/vendor/bootstrapValidator.js"></script> 
+        
         <script type="text/javascript"  src="./js/vendor/language/es_ES.js"></script>
         <script type="text/javascript"  src="./js/vendor/creole-parser.js"></script>
-
-        <!--<script type="text/javascript"  src="./js/vendor/metro.min.js"></script>-->
-
-
-        <!--
-        <script type="text/javascript"  src="./js/vendor/jquery-ui.js"></script>
-        <script src="./js/vendor/jquery.validate.min.js"></script>
-        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
-        <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
-        -->
-
 
         <script src="js/generic/view.js" charset="UTF-8"></script>    
         <script src="js/generic/param.js" charset="UTF-8"></script>
@@ -210,10 +197,7 @@
         <script src="js/specific/stock/view.js" charset="UTF-8"></script>
         <script src="js/specific/stock/routes.js" charset="UTF-8"></script>
 
-        
-        
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="css/js/materialize.min.js"></script>
+        <script type="text/javascript" src="css/js/materialize.min.js"></script>
         
         <script type="text/javascript">
 
