@@ -50,7 +50,7 @@ libroView.prototype.getLibrosList = function (jason) {
         listado += "<div class='card-reveal' style='transform: translateY(0px);'>"
         listado += "<span class='card-title'>"+ titulo.replace("%20"," ");
         listado += "<i class='mdi-navigation-close right'></i></span>";
-        listado += "<p>EDITORIAL: " + editorial + "</p><p> ISBN: " + isbn + "</p></div>";
+        listado += "<p>EDITORIAL: " + editorial.replace("%20"," ") + "</p><p> ISBN: " + isbn + "</p></div>";
         listado += "</div>";
         listado += "</div>";
     }

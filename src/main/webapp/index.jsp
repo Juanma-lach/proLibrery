@@ -214,6 +214,9 @@
                 fUsuarioRoutes();
                 fTipousuarioRoutes();
                 fLibroRoutes();
+                fClienteRoutes();
+                fCompraRoutes();
+                fStockRoutes();
 
                 Path.listen();
 
