@@ -28,6 +28,8 @@ public class LibroBeanGenSpImpl extends BeanGenImpl implements BeanInterface {
     private String isbn = "";
     @Expose
     private String editorial = "";
+    @Expose
+    private String urlimagen = "";
 
     public LibroBeanGenSpImpl() {
 
@@ -61,5 +63,14 @@ public class LibroBeanGenSpImpl extends BeanGenImpl implements BeanInterface {
         this.editorial = editorial;
     }
 
+    public String getUrlimagen() {
+        return urlimagen;
+    }
+
+    public void setUrlimagen(String url_imagen) {
+        this.urlimagen = url_imagen;
+    }
+
+    
     
 }

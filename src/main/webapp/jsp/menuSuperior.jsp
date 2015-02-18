@@ -23,10 +23,13 @@
     <ul class="dropdown-menu">
         <li class="dropdown-header">Gestión de usuarios</li>
         <li><a href="jsp#/usuario">Usuarios</a></li>
+        <li><a href="jsp#/cliente">Clientes</a></li>
         <li class="divider"></li>
         <li class="dropdown-header">Más contenido</li>  
         <li><a href="jsp#/libro">Libros</a></li>  
-        <li><a href="jsp#/usuario">Clientes</a></li>
+        <li><a href="jsp#/stock">Stock</a></li>
+        <li><a href="jsp#/compra">Compra</a></li>
+
 
     </ul>
 </li>    
