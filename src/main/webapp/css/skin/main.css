@@ -162,8 +162,22 @@ th{
 }
 
 .blanco {
-    position: relative;
+    position: absolute;
+    top: 0px;
     height: 457px;
+    width: 100%;
     background-color: white;
     opacity: 0.5;
+}
+
+.waves-block > img {
+    height: 433px !important;
+}
+
+.bs-example-modal-lg{
+    width: 950px !important;
+    background-color: black;
+}
+.has-feedback .form-control{
+    padding-right: 0 !important;
 }
