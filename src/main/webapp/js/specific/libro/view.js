@@ -34,8 +34,9 @@ libroView.prototype.okValidation = function (f) {
 libroView.prototype.getLibrosList = function (jason) {
     var long = jason.list.length;
     listado = "<div class='m12'>";
-    imagen = "css/images/prueba.jpg";
+    imagennull = "css/images/prueba.jpg";
     for (i = 0; i < long; i++) {
+        imagen = jason.list[i].urlimagen;
         titulo = jason.list[i].titulo;
         isbn = jason.list[i].isbn;
         editorial = jason.list[i].editorial;

@@ -28,7 +28,7 @@ body {
 /* Intro de la pagina de inicio */
 #intro {
     position: relative;
-    //background: url(../../images/portada.jpg) no-repeat center center;
+    background: url(../images/fotoIntro.jpg) no-repeat center center;
     webkit-background-size: cover;
     moz-background-size: cover;
     o-background-size: cover;
@@ -45,7 +45,7 @@ body {
     text-align: center;
     letter-spacing: 1px;
     font-family: 'Roboto', sans-serif;
-    color: #000 !important;
+    color: black !important;
     font-size: 500%;
     font-weight: 100;
 }
@@ -159,4 +159,11 @@ th{
 
 .modal-backdrop {
     display: none !important;
+}
+
+.blanco {
+    position: relative;
+    height: 457px;
+    background-color: white;
+    opacity: 0.5;
 }

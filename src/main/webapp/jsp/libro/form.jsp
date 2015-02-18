@@ -47,6 +47,13 @@
             <input type="text"  class="form-control"  id="editorial" name="editorial" size="15" placeholder="Introduce la editorial del libro" />
         </div>
     </div>
+    
+    <div class="form-group">
+        <label class="col-sm-2 control-label"  for="imagen">Url Imagen</label>
+        <div class="col-sm-10">
+            <input type="text"  class="form-control"  id="imagen" name="imagen" size="15" placeholder="Introduce una url directa a la imagen" />
+        </div>
+    </div>
 
 
     <div class="form-group">
@@ -100,6 +107,13 @@
                             validators: {
                                 notEmpty: {
                                     message: 'Debe introducir una editorial'
+                                }
+                            }
+                        },
+                        imagen: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Debe introducir una url en el campo imagen'
                                 }
                             }
                         }

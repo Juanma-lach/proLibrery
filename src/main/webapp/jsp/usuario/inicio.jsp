@@ -29,6 +29,7 @@
 %>
 </div>-->
 <div id="intro">
+    <div class="blanco"></div>
     <h1>
         ProLibrery<br/>
         <span>Tus libros al alcance de la mano.</span>
