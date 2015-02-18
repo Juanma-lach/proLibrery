@@ -110,7 +110,7 @@
                                 }
                             }
                         },
-                        imagen: {
+                        urlimagen: {
                             validators: {
                                 notEmpty: {
                                     message: 'Debe introducir una url en el campo imagen'

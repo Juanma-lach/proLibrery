@@ -32,6 +32,13 @@ libroView.prototype.okValidation = function (f) {
 };
 
 libroView.prototype.getLibrosList = function (jason) {
+
+    function replaceAll(text, busca, reemplaza) {
+        while (text.toString().indexOf(busca) != - 1)
+        text = text.toString().replace(busca, reemplaza);
+        return text;
+    }
+
     var long = jason.list.length;
     listado = "<div class='m12'>";
     imagennull = "css/images/prueba.jpg";
@@ -43,20 +50,20 @@ libroView.prototype.getLibrosList = function (jason) {
         listado += "<div class='col s12 m3'>";
         listado += "<div class='card'>";
         listado += "<div class='card-image waves-effect waves-block waves-light'>";
-        listado += "<img class='activator' src="+imagen+" />";
+        listado += "<img class='activator' src=" + imagen + " />";
         listado += "</div>";
         listado += "<div class='card-content'>";
-        listado += "<span class='card-title activator'>" + titulo.replace("%20"," ") +
+        listado += "<span class='card-title activator'>" + replaceAll(titulo, "%20", " ") +
                 "<i class='mdi-navigation-more-vert right'></i></span></div>";
         listado += "<div class='card-reveal' style='transform: translateY(0px);'>"
-        listado += "<span class='card-title'>"+ titulo.replace("%20"," ");
+        listado += "<span class='card-title'>" + replaceAll(titulo, "%20", " ");
         listado += "<i class='mdi-navigation-close right'></i></span>";
-        listado += "<p>EDITORIAL: " + editorial.replace("%20"," ") + "</p><p> ISBN: " + isbn + "</p></div>";
+        listado += "<p>EDITORIAL: " + replaceAll(editorial, "%20", " ") + "</p><p> ISBN: " + isbn + "</p></div>";
         listado += "</div>";
         listado += "</div>";
     }
     listado += "</div>";
-    
+
     listado += "<script type='text/javascript' src='https://code.jquery.com/jquery-2.1.1.min.js'></script>";
     listado += "<script type='text/javascript' src='css/js/materialize.min.js'></script>";
     return listado;
