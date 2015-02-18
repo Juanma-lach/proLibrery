@@ -49,9 +49,9 @@
     </div>
     
     <div class="form-group">
-        <label class="col-sm-2 control-label"  for="imagen">Url Imagen</label>
+        <label class="col-sm-2 control-label"  for="urlimagen">Url Imagen</label>
         <div class="col-sm-10">
-            <input type="text"  class="form-control"  id="imagen" name="imagen" size="15" placeholder="Introduce una url directa a la imagen" />
+            <input type="text"  class="form-control"  id="urlimagen" name="urlimagen" size="15" placeholder="Introduce una url directa a la imagen" />
         </div>
     </div>
 
