@@ -26,7 +26,7 @@ public class StockBeanGenSpImpl extends BeanGenImpl implements BeanInterface {
     @Expose
     private String cantidad = "";
     @Expose
-    private String aprecio = "";
+    private Double precio = 0.00;
     @Expose(serialize = false)
     private Integer id_libro = 0; //importante inicializar a 0 las claves ajenas
     @Expose(deserialize = false)
@@ -48,12 +48,12 @@ public class StockBeanGenSpImpl extends BeanGenImpl implements BeanInterface {
         this.cantidad = cantidad;
     }
 
-    public String getAprecio() {
-        return aprecio;
+    public Double getPrecio() {
+        return precio;
     }
 
-    public void setAprecio(String aprecio) {
-        this.aprecio = aprecio;
+    public void setPrecio(Double precio) {
+        this.precio = precio;
     }
 
     public Integer getId_libro() {

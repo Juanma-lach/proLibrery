@@ -81,4 +81,11 @@ function fStockRoutes() {
         $('#indexContenidoJsp').empty();
         return false;
     });
+    Path.map("#/stock/verprecios").to(function () {
+        $('#indexContenidoJsp').spinner();
+        //var paramsObject = param().defaultizeUrlObjectParameters(param().getUrlObjectFromUrlString(this.params['url']));
+        oStockControl.verPrecios($('#indexContenido'), oStockModel, oStockView);
+        $('#indexContenidoJsp').empty();
+        return false;
+    });
 }

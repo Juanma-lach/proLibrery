@@ -181,3 +181,7 @@ th{
 .has-feedback .form-control{
     padding-right: 0 !important;
 }
+
+.margin-top {
+    margin-top: 80px;
+}

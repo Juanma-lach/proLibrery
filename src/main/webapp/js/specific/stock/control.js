@@ -25,3 +25,12 @@ stockControl.prototype.getClassNameStock = function () {
 };
 var oStockControl = new stockControl('stock');
 
+stockControl.prototype.verPrecios = function (place, oModel, oView) {
+    var thisObject = this;
+    $(place).empty();
+    var oStockModel = oModel;
+    var oStockView = oView;
+    data = oStockModel.setGenericOperation("getpage&rpp=5000","");
+    listadoLibrosConPrecio = oStockView.getLibrosConTodo(data);
+    $("#indexContenido").html(listadoLibrosConPrecio);
+};

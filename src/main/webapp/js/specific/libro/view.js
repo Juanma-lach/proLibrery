@@ -40,7 +40,7 @@ libroView.prototype.getLibrosList = function (jason) {
     }
 
     var long = jason.list.length;
-    listado = "<div class='m12'>";
+    listado = "<div class='m12 margin-top'>";
     imagennull = "css/images/prueba.jpg";
     for (i = 0; i < long; i++) {
         imagen = jason.list[i].urlimagen;
@@ -50,7 +50,7 @@ libroView.prototype.getLibrosList = function (jason) {
         listado += "<div class='col s12 m3'>";
         listado += "<div class='card'>";
         listado += "<div class='card-image waves-effect waves-block waves-light'>";
-        listado += "<img class='activator' src=" + imagen + " />";
+        listado += "<img class='activator' src='images/" + imagen + ".jpg' />";
         listado += "</div>";
         listado += "<div class='card-content'>";
         listado += "<span class='card-title activator'>" + replaceAll(titulo, "%20", " ") +

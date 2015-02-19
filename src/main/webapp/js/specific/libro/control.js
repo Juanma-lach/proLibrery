@@ -32,5 +32,5 @@ libroControl.prototype.listar = function (place, oModel, oView) {
     var oLibroView = oView;
     data = oLibroModel.setGenericOperation("getpage&rpp=5000","");
     listadoLibros = oLibroView.getLibrosList(data);
-    $("#contenidoParseado").html(listadoLibros);
+    $("#indexContenido").html(listadoLibros);
 };
