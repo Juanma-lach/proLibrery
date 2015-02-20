@@ -28,15 +28,15 @@ var oStockView = new stockView('stock');
 
 stockView.prototype.doEventsLoading = function () {
     var thisObject = this;
-    $('#stockForm #obj_estado_button').unbind('click');
-    $("#stockForm #obj_estado_button").click(function () {
+    $('#stockForm #obj_libro_button').unbind('click');
+    $("#stockForm #obj_libro_button").click(function () {
         var oControl = oLibroControl;  //para probar dejar usuario
         //vista('usuario').cargaModalBuscarClaveAjena('#modal01', "usuario");
 
-        $("#libroForm").append(thisObject.getEmptyModal());
+        $("#stockForm").append(thisObject.getEmptyModal());
         util().loadForm('#modal01', thisObject.getFormHeader('Elección de libro'), "", thisObject.getFormFooter(), true);
 
-        $('#libroForm').append(thisObject.getEmptyModal());
+        $('#stockForm').append(thisObject.getEmptyModal());
 
         oControl.list('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), true, oLibroModel, oLibroView);
         oControl.modalListEventsLoading('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), function (id) {

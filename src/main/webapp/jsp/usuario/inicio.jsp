@@ -16,8 +16,10 @@
  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 --%>
 
+<%@page import="net.daw.bean.generic.specific.implementation.UsuarioBeanGenSpImpl"%>
 <%@page import="net.daw.helper.AppInformationHelper"%>
 <%@page import="net.daw.helper.EstadoHelper"%>
+<%UsuarioBeanGenSpImpl user = (UsuarioBeanGenSpImpl) request.getSession().getAttribute("usuarioBean");%>
 <!--<div class="jumbotron">
     <h1>Bienvenidos a <%=AppInformationHelper.getAppName()%> <%=EstadoHelper.getAnyo()%></h1>
     <h3>Versión (v.<%=EstadoHelper.getVersion()%>) de <%=EstadoHelper.getFecha()%></h3>
@@ -36,6 +38,36 @@
     </h1>
 </div>
 
+<div class="row">
+    <div class="container">
+        <div class="bordered-inicio col-md-12">
+            <span>Ofertas</span>
+        </div>
+    </div>
+
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <%if (user == null) {%>    
+        <a href="#/libro/buscar" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-search"></i>buscar libro</a>
+        <a href="#/libro/libros" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-dns"></i>ver listas de libros</a>
+        <a href="#/stock/verprecios" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-description"></i>ver listas de libros en tienda con precios</a>
+        <%} else if (user.getId_tipousuario() == 1) {%>
+
+        <a href="?ob=usuario&op=menu" class="boton-inicio waves-effect waves-light btn"><i class="mdi-content-forward"></i>panel de administracion</a>
+        <a href="#/libro/buscar" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-search"></i>buscar libro</a>
+        <a href="#/libro/libros" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-dns"></i>ver listas de libros</a>
+        <a href="#/stock/verprecios" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-description"></i>ver listas de libros en tienda con precios</a>
+
+        <%} else {%>
+        <a href="#/libro/buscar" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-search"></i>buscar libro</a>
+        <a href="#/libro/libros" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-dns"></i>ver listas de libros</a>
+        <a href="#/stock/verprecios" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-description"></i>ver listas de libros en tienda con precios</a>
+        <%}%>
+    </div>
+</div>
+<hr>
 <div class="row">
     <div class="col-md-8">
         <div class="row">

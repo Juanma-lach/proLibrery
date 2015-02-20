@@ -185,3 +185,28 @@ th{
 .margin-top {
     margin-top: 80px;
 }
+
+.bordered-inicio {
+    border: 1px white lightblue;
+    background-color: white;
+    height: 250px;
+}
+
+.boton-inicio {
+    width: 100%;
+    height: 70px;
+}
+.boton-inicio > i{
+    margin-right: 20px;
+}
+
+.tabs li.tab a:hover {
+    color: #093081 !important;
+}
+.tabs li.tab a {
+    color: #6077CF !important;
+}
+
+.tabs .indicator {
+    background-color: #6077CF !important;
+}

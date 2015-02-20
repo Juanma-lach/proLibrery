@@ -35,7 +35,7 @@
             <input  class="form-control"  id="obj_libro_id" class="input-mini" name="id_libro" type="text" size="5" maxlength="5" />  
         </div>
         <div class="col-sm-1">              
-            <a class="btn btn-primary btn-sm" id="obj_tipousuario_button" href="#"><i class="glyphicon glyphicon-search"></i></a>
+            <a class="btn btn-primary btn-sm" id="obj_libro_button" href="#"><i class="glyphicon glyphicon-search"></i></a>
         </div>        
         <label class="col-sm-7" for="obj_stock_desc" id="obj_libro_desc"></label>                     
     </div>
