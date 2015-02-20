@@ -44,7 +44,7 @@ stockView.prototype.doEventsLoading = function () {
             $('#obj_libro_desc').text(decodeURIComponent(oLibroModel.getMeAsAForeignKey(id)));
             $('#modal01').modal('hide');
 
-        },oLibroModel, oLibroView);
+        }, oLibroModel, oLibroView);
         return false;
     });
     $('#contenido_button').unbind('click');
@@ -78,7 +78,7 @@ stockView.prototype.getLibrosConTodo = function (jason) {
 
     function replaceAll(text, busca, reemplaza) {
         while (text.toString().indexOf(busca) != - 1)
-        text = text.toString().replace(busca, reemplaza);
+            text = text.toString().replace(busca, reemplaza);
         return text;
     }
 
@@ -92,24 +92,29 @@ stockView.prototype.getLibrosConTodo = function (jason) {
         titulo = jason.list[i].obj_libro.titulo;
         isbn = jason.list[i].obj_libro.isbn;
         editorial = jason.list[i].obj_libro.editorial;
+        longTitulo = titulo.substring(0, 25);
+        longT = longTitulo.length;
         listado += "<div class='col s12 m3'>";
         listado += "<div class='card'>";
         listado += "<div class='card-image waves-effect waves-block waves-light'>";
         listado += "<img class='activator' src='images/" + imagen + ".jpg' />";
         listado += "</div>";
         listado += "<div class='card-content'>";
-        listado += "<span class='card-title activator'>" + replaceAll(titulo, "%20", " ") + 
-                "<i class='mdi-navigation-more-vert right'></i></span>";
-        if(cantidad > 0){
+        listado += "<span class='card-title activator'>" + titulo.substring(0, 25);
+        if (longT >= 25) {
+            listado += "...";
+        }
+        listado += "<i class='mdi-navigation-more-vert right'></i></span>";
+        if (cantidad > 0) {
             listado += "<p>" + replaceAll(precio, ".", ",") + "</p></div>";
         }
-        if(cantidad == 0){
+        if (cantidad == 0) {
             listado += "<p>No está disponible</p></div>";
         }
         listado += "<div class='card-reveal' style='transform: translateY(0px);'>"
-        listado += "<span class='card-title'>" + replaceAll(titulo, "%20", " ");
+        listado += "<span class='card-title'>" + titulo;
         listado += "<i class='mdi-navigation-close right'></i></span>";
-        listado += "<p>EDITORIAL: " + replaceAll(editorial, "%20", " ") + "</p><p> ISBN: " + isbn + "</p></div>";
+        listado += "<p>EDITORIAL: " + editorial + "</p><p> ISBN: " + isbn + "</p></div>";
         listado += "</div>";
         listado += "</div>";
     }

@@ -35,34 +35,40 @@ libroView.prototype.getLibrosList = function (jason) {
 
     function replaceAll(text, busca, reemplaza) {
         while (text.toString().indexOf(busca) != - 1)
-        text = text.toString().replace(busca, reemplaza);
+            text = text.toString().replace(busca, reemplaza);
         return text;
     }
 
     var long = jason.list.length;
-    listado = "<div class='m12 margin-top'>";
+    listado = "<div class='col m10 offset-m1 margin-top margin-top'>";
     imagennull = "css/images/prueba.jpg";
     for (i = 0; i < long; i++) {
         imagen = jason.list[i].urlimagen;
         titulo = jason.list[i].titulo;
         isbn = jason.list[i].isbn;
         editorial = jason.list[i].editorial;
+        longTitulo = titulo.substring(0, 25);
+        longT = longTitulo.length;
         listado += "<div class='col s12 m3'>";
         listado += "<div class='card'>";
         listado += "<div class='card-image waves-effect waves-block waves-light'>";
-        listado += "<img class='activator' src='images/" + imagen + ".jpg' />";
+        listado += "<img class='img-list activator' src='images/" + imagen + ".jpg' />";
         listado += "</div>";
         listado += "<div class='card-content'>";
-        listado += "<span class='card-title activator'>" + replaceAll(titulo, "%20", " ") +
-                "<i class='mdi-navigation-more-vert right'></i></span></div>";
+        listado += "<span class='card-title activator'>" + titulo.substring(0, 25);
+        if (longT >= 25) {
+            listado += "...";
+        }
+        listado += "<i class='mdi-navigation-more-vert right'></i></span></div>";
         listado += "<div class='card-reveal' style='transform: translateY(0px);'>"
-        listado += "<span class='card-title'>" + replaceAll(titulo, "%20", " ");
+        listado += "<span class='card-title'>" + titulo;
         listado += "<i class='mdi-navigation-close right'></i></span>";
-        listado += "<p>EDITORIAL: " + replaceAll(editorial, "%20", " ") + "</p><p> ISBN: " + isbn + "</p></div>";
+        listado += "<p>EDITORIAL: " + editorial + "</p><p> ISBN: " + isbn + "</p></div>";
         listado += "</div>";
         listado += "</div>";
     }
     listado += "</div>";
+    listado += "<div id='pagination'></div>";
 
     listado += "<script type='text/javascript' src='https://code.jquery.com/jquery-2.1.1.min.js'></script>";
     listado += "<script type='text/javascript' src='css/js/materialize.min.js'></script>";
