@@ -214,3 +214,21 @@ th{
 .tabs .indicator {
     background-color: #6077CF !important;
 }
+
+.librosMasPuntuados > p, .nuevosLibros > p {
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 70px;
+}
+
+.menu-paginicial > a {
+    text-align: left !important;
+}
+
+.nuevosLibros {
+    margin-bottom: 100px;
+}
+
+.hovered:hover {
+    opacity: 0.8;
+}

@@ -49,7 +49,7 @@ libroView.prototype.getLibrosList = function (jason) {
         editorial = jason.list[i].editorial;
         longTitulo = titulo.substring(0, 25);
         longT = longTitulo.length;
-        listado += "<div class='col s12 m3'>";
+        listado += "<div class='hovered col s12 m3'>";
         listado += "<div class='card'>";
         listado += "<div class='card-image waves-effect waves-block waves-light'>";
         listado += "<img class='img-list activator' src='images/" + imagen + ".jpg' />";

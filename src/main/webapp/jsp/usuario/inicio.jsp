@@ -38,39 +38,52 @@
     </h1>
 </div>
 
-<div class="row">
+<!--<div class="row">
     <div class="container">
         <div class="bordered-inicio col-md-12">
             <span>Ofertas</span>
         </div>
     </div>
 
-</div>
-<hr>
+</div> 
+<hr>-->
 <div class="row">
-    <div class="col-md-12">
+    <div class="menu-paginicial col-md-12">
         <%if (user == null) {%>    
-        <a href="#/libro/buscar" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-search"></i>buscar libro</a>
-        <a href="#/libro/libros" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-dns"></i>ver listas de libros</a>
-        <a href="#/stock/verprecios" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-description"></i>ver listas de libros en tienda con precios</a>
+        <a href="#/libro/buscar" class="col m4 boton-inicio waves-effect waves-light btn green lighten-1"><i class="mdi-action-search"></i>buscar libro</a>
+        <a href="#/libro/libros" class="col m4 boton-inicio waves-effect waves-light btn red accent-2"><i class="mdi-action-dns"></i>ver todos los libros</a>
+        <a href="#/stock/verprecios" class="col m4 boton-inicio waves-effect waves-light btn amber darken-2"><i class="mdi-action-description"></i>ver libros en tienda con precios</a>
         <%} else if (user.getId_tipousuario() == 1) {%>
 
-        <a href="?ob=usuario&op=menu" class="boton-inicio waves-effect waves-light btn"><i class="mdi-content-forward"></i>panel de administracion</a>
-        <a href="#/libro/buscar" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-search"></i>buscar libro</a>
-        <a href="#/libro/libros" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-dns"></i>ver listas de libros</a>
-        <a href="#/stock/verprecios" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-description"></i>ver listas de libros en tienda con precios</a>
+        <a href="?ob=usuario&op=menu" class="col m4 offset-m1 boton-inicio waves-effect waves-light btn light-green darken-2"><i class="mdi-content-forward"></i>panel de administracion</a>
+        <a href="#/libro/buscar" class="col m4 offset-m1 boton-inicio waves-effect waves-light btn green lighten-1"><i class="mdi-action-search"></i>buscar libro</a>
+        <a href="#/libro/libros" class="col m4 offset-m1 boton-inicio waves-effect waves-light btn red accent-2"><i class="mdi-action-dns"></i>ver todos los libros</a>
+        <a href="#/stock/verprecios" class="col m4 offset-m1 boton-inicio waves-effect waves-light btn amber darken-2"><i class="mdi-action-description"></i>ver libros en tienda con precios</a>
 
         <%} else {%>
-        <a href="#/libro/buscar" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-search"></i>buscar libro</a>
-        <a href="#/libro/libros" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-dns"></i>ver listas de libros</a>
-        <a href="#/stock/verprecios" class="boton-inicio waves-effect waves-light btn"><i class="mdi-action-description"></i>ver listas de libros en tienda con precios</a>
+        <a href="#/libro/buscar" class="col m4 boton-inicio waves-effect waves-light btn green lighten-1"><i class="mdi-action-search"></i>buscar libro</a>
+        <a href="#/libro/libros" class="col m4 boton-inicio waves-effect waves-light btn red accent-2"><i class="mdi-action-dns"></i>ver todos los libros</a>
+        <a href="#/stock/verprecios" class="col m4 boton-inicio waves-effect waves-light btn amber darken-2"><i class="mdi-action-description"></i>ver libros en tienda con precios</a>
         <%}%>
     </div>
 </div>
-<hr>
+    
+<div class="col m12 nuevosLibros">
+    <p>Últimos libros</p>
+    <div class="col m10 offset-m1" id="libros-nuevos"></div>
+</div>
+<br />
+    
+<div class="col m12 librosMasPuntuados">
+    <p>Libros mejor valorados </p>
+    <div class="col m10 offset-m1" id="librospuntuados"></div>
+</div>
+<br/>
 <div class="row">
     <div class="col-md-8">
         <div class="row">
+
+            <hr>
             <div class="col-md-6">
                 <h3>¿Qué es <%=AppInformationHelper.getAppName()%>?</h3>
                 <p>Es una aplicación didáctica para aprender a organizar y desarrollar 
@@ -115,3 +128,87 @@
         </ul>
     </div>
 </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $.ajax({
+            url: "http://localhost:8081/proLibrary/json?ob=libro&op=getpage&order=puntuacion&ordervalue=desc",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                listado = "";
+                for (i = 1; i <= 4; i++) {
+                    imagen = data.list[i].urlimagen;
+                    titulo = data.list[i].titulo;
+                    isbn = data.list[i].isbn;
+                    editorial = data.list[i].editorial;
+                    puntuacion = data.list[i].puntuacion;
+                    longTitulo = titulo.substring(0, 25);
+                    longT = longTitulo.length;
+                    listado += "<div class='hovered col s6 m3'>";
+                    listado += "<div class='card'>";
+                    listado += "<div class='card-image waves-effect waves-block waves-light'>";
+                    listado += "<img class='img-list activator' src='images/" + imagen + ".jpg' />";
+                    listado += "</div>";
+                    listado += "<div class='card-content'>";
+                    listado += "<span class='card-title activator'>" + titulo.substring(0, 25);
+                    if (longT >= 25) {
+                        listado += "...";
+                    }
+                    listado += "<i class='mdi-navigation-more-vert right'></i></span>";
+                    listado += "<p> Valoración: " + puntuacion + "</p></div>";
+                    listado += "<div class='card-reveal' style='transform: translateY(0px);'>"
+                    listado += "<span class='card-title'>" + titulo;
+                    listado += "<i class='mdi-navigation-close right'></i></span>";
+                    listado += "<p>EDITORIAL: " + editorial + "</p><p> ISBN: " + isbn + "</p></div>";
+                    listado += "</div>";
+                    listado += "</div>";
+                }
+
+                $("#librospuntuados").html(listado);
+            }});
+
+        $.ajax({
+            url: "http://localhost:8081/proLibrary/json?ob=libro&op=getpage&order=id&ordervalue=desc",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                listado2 = "";
+                for (i = 1; i <= 4; i++) {
+                    imagen2 = data.list[i].urlimagen;
+                    titulo2 = data.list[i].titulo;
+                    isbn2 = data.list[i].isbn;
+                    editorial2 = data.list[i].editorial;
+                    puntuacion2 = data.list[i].puntuacion;
+                    longTitulo2 = titulo2.substring(0, 25);
+                    longT2 = longTitulo2.length;
+                    listado2 += "<div class='hovered col s6 m3'>";
+                    listado2 += "<div class='card'>";
+                    listado2 += "<div class='card-image waves-effect waves-block waves-light'>";
+                    listado2 += "<img class='img-list activator' src='images/" + imagen2 + ".jpg' />";
+                    listado2 += "</div>";
+                    listado2 += "<div class='card-content'>";
+                    listado2 += "<span class='card-title activator'>" + titulo2.substring(0, 25);
+                    if (longT2 >= 25) {
+                        listado2 += "...";
+                    }
+                    listado2 += "<i class='mdi-navigation-more-vert right'></i></span>";
+                    listado2 += "<p> Valoración: " + puntuacion2 + "</p></div>";
+                    listado2 += "<div class='card-reveal' style='transform: translateY(0px);'>"
+                    listado2 += "<span class='card-title'>" + titulo2;
+                    listado2 += "<i class='mdi-navigation-close right'></i></span>";
+                    listado2 += "<p>EDITORIAL: " + editorial2 + "</p><p> ISBN: " + isbn2 + "</p></div>";
+                    listado2 += "</div>";
+                    listado2 += "</div>";
+                }
+
+                $("#libros-nuevos").html(listado2);
+            }});
+
+    });
+
+
+
+</script>

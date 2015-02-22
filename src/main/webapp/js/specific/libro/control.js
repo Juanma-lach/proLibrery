@@ -34,3 +34,13 @@ libroControl.prototype.listar = function (place, oModel, oView) {
     listadoLibros = oLibroView.getLibrosList(data);
     $("#indexContenido").html(listadoLibros);
 };
+
+libroControl.prototype.buscar = function (place, objParams, oModel, oView) {
+    var thisObject = this;
+    $(place).empty();
+    var oLibroModel = oModel;
+    var oLibroView = oView;
+    data = oLibroModel.setGenericOperation("getpage&rpp=5000","");
+    $(place).append(oView.getPanel("Busqueda",
+            oLibroView.getEmptyView("buscar", 1)));
+};
