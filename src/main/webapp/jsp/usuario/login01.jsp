@@ -19,7 +19,7 @@
 <%@page import="net.daw.helper.EstadoHelper"%>
 <div class="container margen-superior">
     <div class="row">
-        <div class="m12">
+        <div class="col m6 offset-m3">
             <img class="pull-left" src="fonts/user.png" alt="user image" style="padding: 20px 10px 5px 0" />
             <h1>Formulario de entrada al sistema</h1>
             <form class="form-signin" id="loginForm" action="jsp" role="form" method="post">                                    
@@ -49,8 +49,7 @@
                 <%
                     }
                 %>                
-                <button class="btn btn-lg btn-primary btn-block" type="submit"  style="margin-top: 15px">Acceder</button>   
-                <button class="btn btn-lg btn-danger btn-block" type="reset" style="margin-top: 5px">Reset</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit"  style="margin-top: 15px">Acceder</button>
             </form>
         </div>
     </div>

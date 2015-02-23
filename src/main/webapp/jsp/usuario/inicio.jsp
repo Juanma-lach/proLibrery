@@ -47,6 +47,7 @@
 
 </div> 
 <hr>-->
+<%if(user != null){%>
 <div class="row">
     <div class="menu-paginicial col-md-12">
         <%if (user == null) {%>    
@@ -79,6 +80,7 @@
     <div class="col m10 offset-m1" id="librospuntuados"></div>
 </div>
 <br/>
+<%}%>
 <div class="row">
     <div class="col-md-8">
         <div class="row">

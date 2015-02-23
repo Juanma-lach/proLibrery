@@ -23,7 +23,7 @@
 <%
     ArrayList<String> alColumnsNames;
     Iterator<String> oIterador;
-    String strNombreMantenimiento = "compra";
+    String strNombreMantenimiento = "tipoCliente";
     Connection connection = (Connection) request.getAttribute("connection");    
 %>
 <div class="row">

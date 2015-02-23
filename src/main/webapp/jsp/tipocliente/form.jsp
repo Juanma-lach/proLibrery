@@ -28,27 +28,31 @@
             <input type="text" id="id" class="form-control"  name="id" placeholder="id" />
         </div>
     </div>
-    
     <div class="form-group">
-        <label class="col-sm-2 control-label" for="obj_cliente_id">Cliente: </label> 
-        <div class="col-sm-2">              
-            <input  class="form-control"  id="obj_cliente_id" class="input-mini" name="id_cliente" type="text" size="5" maxlength="5" />  
+        <label class="col-sm-2 control-label"  for="titulo">Título:</label>
+        <div class="col-sm-6">
+            <input type="text" id="titulo" class="form-control"  name="titulo" size="15" placeholder="Introduce el título del libro" />
         </div>
-        <div class="col-sm-1">              
-            <a class="btn btn-primary btn-sm" id="obj_cliente_button" href="#"><i class="glyphicon glyphicon-search"></i></a>
-        </div>        
-        <label class="col-sm-7" for="obj_compra_desc" id="obj_cliente_desc"></label>                     
     </div>
-    
     <div class="form-group">
-        <label class="col-sm-2 control-label" for="obj_libro_id">Libro: </label> 
-        <div class="col-sm-2">              
-            <input  class="form-control"  id="obj_libro_id" class="input-mini" name="id_libro" type="text" size="5" maxlength="5" />  
+        <label class="col-sm-2 control-label"  for="isbn">ISBN:</label>
+        <div class="col-sm-6">
+            <input type="text" id="isbn" class="form-control"  name="isbn" size="15" placeholder="Introduce el código ISBN" />
         </div>
-        <div class="col-sm-1">              
-            <a class="btn btn-primary btn-sm" id="obj_libro_button" href="#"><i class="glyphicon glyphicon-search"></i></a>
-        </div>        
-        <label class="col-sm-7" for="obj_compra_desc" id="obj_libro_desc"></label>                     
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label"  for="editorial">Editorial:</label>
+        <div class="col-sm-10">
+            <input type="text"  class="form-control"  id="editorial" name="editorial" size="15" placeholder="Introduce la editorial del libro" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div id="messages"></div>
+        </div>
     </div>
 
     <div class="form-group">
@@ -74,7 +78,31 @@
                         validating: 'glyphicon glyphicon-refresh'
                     },
                     fields: {
-                        
+                        titulo: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Debe introducir un título'
+                                },
+                                stringLength: {
+                                    max: 255,
+                                    message: 'El título debe tener como máximo 255 caracteres'
+                                }
+                            }
+                        },
+                        isbn: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Debe introducir un ISBN'
+                                }
+                            }
+                        },
+                        editorial: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Debe introducir una editorial'
+                                }
+                            }
+                        }
 
                     }
                 });

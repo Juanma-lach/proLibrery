@@ -30,3 +30,69 @@ var oCompraView = new compraView('compra');
 compraView.prototype.okValidation = function (f) {
     $('#compraForm').on('success.form.bv', f);
 };
+
+compraView.prototype.doEventsLoading = function () {
+    var thisObject = this;
+    $('#compraForm #obj_estado_button').unbind('click');
+    $("#compraForm #obj_estado_button").click(function () {
+        var oControl = oClienteControl;  //para probar dejar compra
+        //vista('compra').cargaModalBuscarClaveAjena('#modal01', "compra");
+
+        $("#compraForm").append(thisObject.getEmptyModal());
+        util().loadForm('#modal01', thisObject.getFormHeader('Elección de compra'), "", thisObject.getFormFooter(), true);
+
+        $('#compraForm').append(thisObject.getEmptyModal());
+
+        oControl.list('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), true, oClienteModel, oClienteView);
+        oControl.modalListEventsLoading('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), function (id) {
+            $('#obj_estado_id').val(id).change();
+            $('#obj_estado_desc').text(decodeURIComponent(oClienteModel.getMeAsAForeignKey(id)));
+            $('#modal01').modal('hide');
+
+        },oClienteModel, oClienteView);
+        return false;
+    });
+    $('#compraForm #obj_compra_button').unbind('click');
+    $("#compraForm #obj_compra_button").click(function () {
+        var oControl = oLibroControl;
+
+        $("#libroForm").append(thisObject.getEmptyModal());
+        util().loadForm('#modal01', thisObject.getFormHeader('Elección de libro'), "", thisObject.getFormFooter(), true);
+
+        $('#compraForm').append(thisObject.getEmptyModal());
+
+        oControl.list('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), true, oLibroModel, oLibroView);
+        oControl.modalListEventsLoading('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), function (id) {
+            $('#objLibro_id').val(id).change();
+            $('#obj_Libro_desc').text(decodeURIComponent(oLibroModel.getMeAsAForeignKey(id)));
+            $('#modal01').modal('hide');
+
+        },oLibroModel, oLibroView);
+        return false;
+    });
+    $('#contenido_button').unbind('click');
+    $('#contenido_button').click(function () {
+        //cabecera = '<button id="full-width" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>' + '<h3 id="myModalLabel">Edición de contenidos</h3>';
+        cabecera = thisObject.getFormHeader('Edición de contenidos');
+        //pie = '<button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cerrar</button>';                        
+        pie = '<a class="btn btn-primary" href="http://creoleparser.googlecode.com/svn/trunk/creoleparser/test_pages/CheatSheetPlus.html">Sintaxis</a>';
+        pie += thisObject.getFormFooter();
+        contenido = '<div class="row"><div class="col-md-6">';
+        contenido += '<textarea type="text" id="contenidomodal" name="contenido" rows="20" cols="70" placeholder="contenido"></textarea>';
+        contenido += '</div><div class="col-md-6"><div id="textoparseado"></div></div>';
+        contenido += '</div>';
+
+        $('#compraForm').append(thisObject.getEmptyModal());
+
+        util().loadForm('#modal01', cabecera, contenido, pie, true);
+        var texto = $('#contenido').val();
+        $('#contenidomodal').val(texto);
+        util().creoleParse(texto, $('#textoparseado'));
+        $('#contenido').val($('#contenidomodal').val());
+        $('#contenidomodal').keyup(function () {
+            util().creoleParse($('#contenidomodal').val(), $('#textoparseado'));
+            $('#contenido').val($('#contenidomodal').val());
+        });
+        return false;
+    });
+};
