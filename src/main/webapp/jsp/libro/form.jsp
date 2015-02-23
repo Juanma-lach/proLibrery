@@ -37,7 +37,7 @@
     <div class="form-group">
         <label class="col-sm-2 control-label"  for="isbn">ISBN:</label>
         <div class="col-sm-6">
-            <input type="text" id="isbn" class="form-control"  name="isbn" size="15" placeholder="Introduce el código ISBN" />
+            <input type="number" id="isbn" class="form-control"  name="isbn" size="15" placeholder="Introduce el código ISBN" />
         </div>
     </div>
 

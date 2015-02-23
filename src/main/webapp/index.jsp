@@ -217,6 +217,7 @@
                 fClienteRoutes();
                 fCompraRoutes();
                 fStockRoutes();
+                fTipoClienteRoutes();
 
                 Path.listen();
 
