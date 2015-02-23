@@ -21,7 +21,7 @@
     int id = user.getId();
 %>
 
-<form class="form-horizontal" role="form" action="#" id="libroForm" name="formulario">
+<form class="form-horizontal" role="form" action="#" id="compraForm" name="formulario">
     <div class="form-group">
         <label class="col-sm-2 control-label" for="id">Id:</label>
         <div class="col-sm-2">
@@ -65,7 +65,7 @@
     $(document).ready(function () {
 
         //http://jqueryvalidation.org/documentation/
-        $('#libroForm')
+        $('#compraForm')
                 .bootstrapValidator({
                     container: '#messages',
                     feedbackIcons: {

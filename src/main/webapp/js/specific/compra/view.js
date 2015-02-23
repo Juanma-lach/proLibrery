@@ -33,38 +33,38 @@ compraView.prototype.okValidation = function (f) {
 
 compraView.prototype.doEventsLoading = function () {
     var thisObject = this;
-    $('#compraForm #obj_estado_button').unbind('click');
-    $("#compraForm #obj_estado_button").click(function () {
+    $('#compraForm #obj_cliente_button').unbind('click');
+    $("#compraForm #obj_cliente_button").click(function () {
         var oControl = oClienteControl;  //para probar dejar compra
         //vista('compra').cargaModalBuscarClaveAjena('#modal01', "compra");
 
         $("#compraForm").append(thisObject.getEmptyModal());
-        util().loadForm('#modal01', thisObject.getFormHeader('Elección de compra'), "", thisObject.getFormFooter(), true);
+        util().loadForm('#modal01', thisObject.getFormHeader('Elección de cliente'), "", thisObject.getFormFooter(), true);
 
         $('#compraForm').append(thisObject.getEmptyModal());
 
         oControl.list('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), true, oClienteModel, oClienteView);
         oControl.modalListEventsLoading('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), function (id) {
-            $('#obj_estado_id').val(id).change();
-            $('#obj_estado_desc').text(decodeURIComponent(oClienteModel.getMeAsAForeignKey(id)));
+            $('#obj_cliente_id').val(id).change();
+            $('#obj_cliente_desc').text(decodeURIComponent(oClienteModel.getMeAsAForeignKey(id)));
             $('#modal01').modal('hide');
 
         },oClienteModel, oClienteView);
         return false;
     });
-    $('#compraForm #obj_compra_button').unbind('click');
-    $("#compraForm #obj_compra_button").click(function () {
+    $('#compraForm #obj_libro_button').unbind('click');
+    $("#compraForm #obj_libro_button").click(function () {
         var oControl = oLibroControl;
 
-        $("#libroForm").append(thisObject.getEmptyModal());
+        $("#compraForm").append(thisObject.getEmptyModal());
         util().loadForm('#modal01', thisObject.getFormHeader('Elección de libro'), "", thisObject.getFormFooter(), true);
 
         $('#compraForm').append(thisObject.getEmptyModal());
 
         oControl.list('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), true, oLibroModel, oLibroView);
         oControl.modalListEventsLoading('#modal01 #modal-body', param().defaultizeUrlObjectParameters({}), function (id) {
-            $('#objLibro_id').val(id).change();
-            $('#obj_Libro_desc').text(decodeURIComponent(oLibroModel.getMeAsAForeignKey(id)));
+            $('#obj_libro_id').val(id).change();
+            $('#obj_libro_desc').text(decodeURIComponent(oLibroModel.getMeAsAForeignKey(id)));
             $('#modal01').modal('hide');
 
         },oLibroModel, oLibroView);
